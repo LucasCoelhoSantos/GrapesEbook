@@ -1,0 +1,174 @@
+* {
+	margin: 0px auto;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	/*
+	list-style: none;
+	font-size: 1.2rem;
+	text-decoration: none;
+	text-align: justify;
+	*/
+  }
+  
+  html,
+  body {
+	height: 100vh;
+	width: 100vw;
+	background-color:rgba(68.90664249658585, 45.3333306312561, 136.00000709295273, 1);
+  }
+
+.caixaDeDados { 
+	background-color:rgba(154.00000602006912, 133.00000727176666, 212.00000256299973, 1);
+	width:40%;
+	height:60%;
+	border-radius:5px;
+	align-self:center;
+	margin-top: 13.5%;
+}
+.caixaDeDados imput{
+	background-color: white;
+	width: 40%;
+	height: 10%;
+	float: right;
+}
+.caixaDeDados form{
+	width: 100%;
+	height: 100%;
+}
+.dados{
+	font-size: x-large;
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+#opcaoPagamento { 
+	width:150px;
+	height:142px;
+	position:absolute;
+	margin-left: 14%;
+	margin-top: 1%;	
+	display:grid;
+}
+#opcaoPagamento img{
+    width:90%;
+    height:100%;
+}
+#opcaoPagamento input{
+	float: left;
+	margin-left: -30%;
+	margin-top: -40%;
+}
+
+#opcaoPagamento > span{
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	color: white;	
+	margin-bottom: 5%;
+	height: 5%;
+}
+.formaPagamento { 
+	color:rgba(255, 255, 255, 1);
+	width:564px;
+	height:97px;
+	position:absolute;
+	left:309px;
+	top:109px;
+	font-family:Roboto;
+	text-align:left;
+	font-size:48px;
+}
+.logo { 
+	width:229px;
+	height:229px;
+	position:absolute;
+	left:25px;
+	top:10px;
+}
+.logo img{
+    width:100%;
+    height: 100%;
+}
+
+.concluirPedido { 
+	background-color:rgba(154.00000602006912, 133.00000727176666, 212.00000256299973, 1);
+	width:20%;
+	height:53px;
+	margin-top:1.8%;
+	margin-left: 65%;
+	border-radius:5px;
+
+}
+
+#concluir{
+	width: 100%;
+	height: 100%;
+	background-color:rgba(154.00000602006912, 133.00000727176666, 212.00000256299973, 1);
+	font-size: 200%;
+	color: white;
+}
+.caixaProfile { 
+	background-color:rgba(255, 255, 255, 1);
+	width:27%;
+	height:150px;
+	position:absolute;
+	left:1390px;
+	top:35px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.profile  { 
+	width:100%;
+	height:100%;
+	left:400px;
+	top:20px;
+	display: flex;
+
+}
+.profile span { 
+	float: left;
+	font-size: x-large;
+	align-self: center;
+	margin-left: 8%;
+
+}
+
+.profile img{
+    width:28%;
+	height:80%;
+	float: right;
+	align-self: center;
+	margin-right: 5%;
+}
+
+fieldset{
+	border: 0;
+}
+
+input{
+	border-radius: 5px;
+}
+
+.campo{
+	margin-bottom: 1em;
+}
+
+.campo label{
+	margin-bottom: -2em;
+	display: block;
+}
+
+fieldset.grupo .campo{
+	float: left;
+	margin-left: 1em;
+}
+
+.campo input[type="text"]{
+	padding: 0.2em;
+	border: 1px solid;
+	box-shadow: 2px 2px 2px;
+	display: flex;
+}
