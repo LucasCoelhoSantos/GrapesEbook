@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>finalizarCompra</title>
+    <link href="styles/finalizarCompra.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/logo300px.png" type="image/x-icon">
+  </head>
+  <body>
+      <div id="opcaoPagamento">
+      <span> Cartão de rédito</span>
+     <img src= "images/card.png">  <input type="radio" checked></input>
+      <span> Boleto</span>
+      <img src= "images/boleto.png"> <input type="radio"> </input>
+      <span> Pix</span>
+     <img src= "images/pix.png">    <input type="radio"> </input>
+      </div>
+      
+      <span  class="formaPagamento">Forma de Pagamento:</span>
+      
+    <div class="caixaDeDados"><span  class="dados"></span>
+     <form>
+       <div class="campo">
+         <label>Número</label>
+         <input type="text" name="num" id="num">
+       </div>
+       <div class="campo">
+        <label>Nome do Titular</label>
+        <input type="text" name="nome" id="nome">
+      </div>
+      <div class="campo">
+        <label>Validade</label>
+        <fieldset class="grupo">
+        <input type="text" name="mes" id="mes">
+      </div>
+      <div class="campo">
+        <input type="text" name="ano" id="ano">
+      </div>
+      </fieldset>
+      <div class="campo">
+        <label>Cód de Segurança</label>
+        <input type="text" name="cod" id="cod">
+      </div>
+      <div class="campo">
+        <label>Parcelamento</label>
+        <input type="text" name="parcelamento" id="parcelamento">
+      </div>
+    
+    </div>
+     </form>
+     </div>
+     <div class="concluirPedido"><button id="concluir">Concluir Pedido</button></div> 
+    <div class="logo">
+    <img src= "images/logo300px.png">   
+    </div>
+    <div class="caixaProfile">
+      <div class="profile"><span class="nome"><h3>Jurema da Silva</h3> jurema.silva@gmail.com</span>
+        <img src= "images/profile_icon_1.png">
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
