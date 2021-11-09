@@ -44,7 +44,7 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 - [Christian Nilles](https://github.com/ChristianNilles)
 - [Guilherme Augusto Soares]()
 - [Lucas Coelho Santos](https://github.com/LucasCoelhoSantos)
-- [Lucas de Carvalho Vilela Welter]()
+- [Lucas de Carvalho Vilela Welter](https://github.com/boltwelter123)
 - [Manuel Neto]()
 
 ### Professor
