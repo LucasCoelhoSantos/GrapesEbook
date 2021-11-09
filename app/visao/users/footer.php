@@ -1,11 +1,4 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= BASEPATH ?>publico/estilos/footer.css">
-</head>
-
-<footer>
-<div class="midle">
+<div class="first-content">
     <div class="conheca">
         <h3>Conheça-nos</h3>
         <a href="#">Informações corporativas</a>
@@ -32,15 +25,16 @@
         <h3>Pagamento</h3>
         <a href="#">Cartões de crédito, cartões de débito e Boleto</a>
     </div>
-
-    <div class="container">
+</div>
+<div class="second-content">
+    <div class="logo">
         <img src="images/logo300px.png" alt="Foto da logo">
+    </div>    
+    <div class="info">
         <a href="#">Condições de Uso</a>
-        <p>|</p> 
         <a href="#">Politicas de vendas</a> 
-        <p>|</p> 
         <a href="#">Notificação de Privacidade</a>
-        <p>|</p> 
         <a href="#">Cookies</a>
     </div>
-</footer>
+    <a href="#home" class="move-top text-center">Inicio</a>
+</div>

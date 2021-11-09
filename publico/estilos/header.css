@@ -7,19 +7,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-}
-
-.middle-menu-bar {
-  display: flex;
-}
-
-.middle-menu-bar > li {
-  margin-left: 10px;
-}
-
-.middle-menu-bar > li > a {
-  display: block;
-  padding: 10px;
+  width: 100%;
+  max-width: 980px;
 }
 
 header ion-icon {
@@ -41,18 +30,8 @@ header > div {
   height: 100px;
 }
 
-.right-profile {
-  background-color: #ffffff;
-  width: 25%;
-  max-height: 90px;
-  border-radius: 5px;
-  margin-top: 25px;
-}
-
-.right-profile > a > img {
-  background-color: #ffffff;
-  height: 60px;
-  padding: 5px;
+.middle-menu-bar {
+  display: flex;
 }
 
 .middle-menu-bar > li {
@@ -75,6 +54,20 @@ header > div {
 
 .middle-menu-bar > li > a:hover {
   background-color: #7757d1;
+}
+
+.right-profile {
+  background-color: #ffffff;
+  width: 25%;
+  max-height: 90px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.right-profile > a > img {
+  background-color: #ffffff;
+  height: 60px;
+  padding: 5px;
 }
 
 @media (max-width: 400px) {

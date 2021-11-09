@@ -7,6 +7,7 @@
 </head>
 
 <body class="flex items-center justify-center">
+    <a href="<?= BASEPATH ?>homepage">Homepage</a>
     <a href="<?= BASEPATH ?>user/list" class="absolute right-0 top-0 text-white font-bold mt-6 mr-6 cursor-pointer leading-none">
         <div class="flex items-center">
             <ion-icon name="list-outline" class="text-2xl pr-1"></ion-icon>
