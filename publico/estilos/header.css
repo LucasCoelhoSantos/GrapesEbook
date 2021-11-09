@@ -1,0 +1,85 @@
+@import url("/publico/estilos/base.css");
+
+header {
+  background-color: #bf8bff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.middle-menu-bar {
+  display: flex;
+}
+
+.middle-menu-bar > li {
+  margin-left: 10px;
+}
+
+.middle-menu-bar > li > a {
+  display: block;
+  padding: 10px;
+}
+
+header ion-icon {
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+header > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-logo {
+  width: 10%;
+}
+
+#logo {
+  height: 100px;
+}
+
+.right-profile {
+  background-color: #ffffff;
+  width: 25%;
+  max-height: 90px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.right-profile > a > img {
+  background-color: #ffffff;
+  height: 60px;
+  padding: 5px;
+}
+
+.middle-menu-bar > li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.middle-menu-bar > li > a {
+  background-color: #9a85d4;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+  font-weight: bold;
+  min-width: 145px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.middle-menu-bar > li > a:hover {
+  background-color: #7757d1;
+}
+
+@media (max-width: 400px) {
+  header > .search-bar,
+  header > .user {
+    display: none;
+  }
+}

@@ -66,6 +66,7 @@ class Route {
 
     // Get current request method
     $method = $_SERVER['REQUEST_METHOD'];
+
     $path_match_found = false;
     $route_match_found = false;
 
@@ -131,5 +132,4 @@ class Route {
     }
   }
 }
-
 ?>

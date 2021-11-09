@@ -1,28 +1,27 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="<?= BASEPATH ?>publico/estilos/base.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= BASEPATH ?>publico/estilos/header.css">
+</head>
 
 <header>
     <div class="left-logo">
-        <picture>
-            <source media="(max-width: 750px)" srcset="images/logo150px.png">
-            <source media="(max-width: 1050px)" srcset="images/logo300px.png">
-            <img id="logo" src="images/logo300px.png" alt="Logo Grape E-Books">
-        </picture>
+        <img id="logo" src="images/logo.png" alt="Logo Grape E-Books">
     </div>
 
-    <nav class="middle-menu-bar">
-        <ul>
-            <li><a href="#">E-books</a></li>
-            <li><a href="#">Audio Livros</a></li>
-            <li><a href="#">Mais Vendidos</a></li>
-            <li><a href="#">Mais</a></li>
+    <nav>
+        <ul class="middle-menu-bar">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">Suporte</a></li>
         </ul>
     </nav>
 
     <div class="right-profile">
         <a href="#"><ion-icon name="cart"></ion-icon></a>
-        <img src="images/profile_icon_1.png" alt="foto de perfil" name="menu-outline" onclick="showPerfil()">
+        <a href="<?= BASEPATH ?>login"><img src="images/profile_icon_1.png" alt="foto de perfil" name="menu-outline"></a>
     </div>
     
     <!--
@@ -49,7 +48,7 @@
         </a>
     </nav>
     -->
-    
 </header>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

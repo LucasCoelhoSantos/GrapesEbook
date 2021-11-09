@@ -44,7 +44,7 @@ class LoginController extends Controller {
 
         if ($usuario && $usuario->igual($_POST['email'], $_POST['senha'])) {
             $_SESSION['user'] = $this->loggedUser = $usuario;
-            header('Location: /user/info');
+            header('Location:'  . BASEPATH . 'user/info');
         }
         else {
             header('Location: ' . BASEPATH . 'login?email=' . $_POST['email'] . '&mensagem=Usuário e/ou senha incorreta!');
@@ -77,7 +77,7 @@ class LoginController extends Controller {
             header('Location: ' . BASEPATH . 'login?acao=entrar&mensagem=Você precisa se identificar primeiro');
             return;
         }
-        $this->view('/users/info', $this->loggedUser);
+        $this->view('users/info', $this->loggedUser);
     }
 
     // Função que remove o usuário da seção (deslogar)
@@ -97,15 +97,15 @@ class LoginController extends Controller {
         $this->view('users/listar', $usuarios);
     }
 
-    public function deletar(): void {
+    public function deletar() {
         // TODO - Primeiro você deve buscar pelo usuário com email informado e armazenar em $usuario (sugestão).
         $usuario = Usuario::buscarUsuario($_POST['email']);
 
         try {
             $usuario->deletar(); // TODO - Nome de método sugerido e já definido em Usuário (devendo implementá-lo)
-            header('Location: ' . BASEPATH . '/user/list?mensagem=Usuário deletado com sucesso!');
+            header('Location: ' . BASEPATH . 'user/list?mensagem=Usuário deletado com sucesso!');
         } catch (PDOException $erro) {
-            header('Location: ' . BASEPATH . '/user/list?mensagem=Erro ao deletar ' . $_GET["email"] . ' !');
+            header('Location: ' . BASEPATH . 'user/list?mensagem=Erro ao deletar ' . $_GET["email"] . ' !');
         }
     }
 }
