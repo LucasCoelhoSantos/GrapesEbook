@@ -22,10 +22,10 @@ Database::createSchema();
 
 // Cria uma instância do controlador para uso
 $controller = new LoginController();
-$controller = new HomepageController();
+$controller2 = new HomepageController();
 
 // Parte responsável pelo direcionamento das requisições aos respectivos métodos do controlador.
-Route::add('/homepage', fn () => $controller->homepageIndex(), ['get']);
+Route::add('/homepage', fn () => $controller2->homepageIndex(), ['get']);
 Route::add('/login', fn () => $controller->loginIndex(), ['get']);
 Route::add('/register', fn () => $controller->cadastrarIndex(), ['get']);
 Route::add('/user/info', fn () => $controller->info(), ['get']);
@@ -38,7 +38,7 @@ Route::add('/user/remove', fn ()  => $controller->deletar(), ['post']);
 
 // Rota auxiliar para redirecionar o usuário.
 Route::add('/', function () {
-    header('Location: ' . BASEPATH . 'login');
+    header('Location: ' . BASEPATH . 'homepage');
 }, ['get']);
 
 Route::add('/.*', function () {

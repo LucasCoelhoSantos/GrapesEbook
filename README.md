@@ -35,6 +35,7 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 - [x] PHP
 - [x] CSS
 - [x] JS
+- [x] WAMPSERVER
 
 ## Participantes
 

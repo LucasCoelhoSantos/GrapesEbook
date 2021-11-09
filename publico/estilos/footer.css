@@ -1,0 +1,71 @@
+@import url("/publico/estilos/base.css");
+
+header {
+  background-color: #9a85d4;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header > form > a {
+  color: #fff;
+}
+
+.midle > div {
+  display: grid;
+  color: #fff;
+}
+
+.midle {
+  background-color: #694fb4;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+}
+
+.midle > div > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.midle > .conheca {
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.midle > .ganhe {
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.midle > .suporte {
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.midle > .pagamento {
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+footer {
+  display: grid;
+  padding: 30px;
+  height: 30%;
+}
+
+footer > img {
+  height: 175px;
+}
+
+footer > .container {
+  flex-wrap: wrap;
+  padding: 50px 0;
+  display: flex;
+  height: 10%;
+}
+
+footer > .container > a {
+  color: #fff;
+}

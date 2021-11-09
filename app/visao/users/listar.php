@@ -34,7 +34,7 @@
                         <td class="border text-center"><?= $user->email ?></td>
                         <td class="border text-center"><?= $user->senha ?></td>
                         <td class="border text-center">
-                            <form action="/user/remove" method="POST" class="delete-form">
+                            <form action="<?= BASEPATH ?>user/remove" method="POST" class="delete-form">
                                 <input type="hidden" name="email" value="<?= $user->email ?>">
                                 <button type="submit">
                                     <ion-icon name="close-outline" class="text-2xl pt-1 text-red-500 font-bold"></ion-icon>
