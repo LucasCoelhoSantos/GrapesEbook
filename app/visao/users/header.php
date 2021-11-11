@@ -1,6 +1,10 @@
+<link rel="stylesheet" href="publico/base/base.css">
+<link rel="stylesheet" href="publico/layout/header.css">
+
 <div class="container">
     <div class="left-logo">
-        <img class="logo" src="images/logo.png" alt="Logo Grape E-Books">
+        <a href="#"><ion-icon name="book"></ion-icon></a>
+        <a href="#"><span>Grapes Ebook</span></a>
     </div>
 
     <div class="menu-section">
@@ -24,10 +28,12 @@
     <div class="right-profile">
         <a href="#"><ion-icon name="cart"></ion-icon></a>
         <a href="<?= BASEPATH ?>login"><ion-icon name="person"></ion-icon></a>
-        <!-- Esta parte será colocada quando o usuário fizer login (retirar o ponto do <.?= BASEPATH ?>)
+        <!-- TO DO
+        Esta parte será aplicada quando o usuário fizer login (retirar o ponto do <.?= BASEPATH ?>)
         <a href="<.?= BASEPATH ?>login">
             <img src="images/profile_icon_1.png" alt="foto de perfil" name="menu-outline">
-        </a>-->
+        </a>
+        -->
     </div>
 </div>
 

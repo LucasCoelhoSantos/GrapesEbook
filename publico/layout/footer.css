@@ -1,0 +1,66 @@
+footer {
+  background-color: #694fb4;
+}
+
+footer > .first-content {
+  display: grid;
+  color: #ffffff;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+}
+
+footer > .first-content > div > a,
+footer > .second-content > div > a {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+footer > .second-content {
+  text-align: center;
+}
+
+footer > .second-content > .logo {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 980px;
+  padding: 20px 0 20px 0;
+}
+
+footer > .second-content > .logo > a > ion-icon {
+  font-size: 5rem;
+  color: #ffffff;
+  padding: 20px 0 0 0;
+}
+
+footer > .second-content > .logo > a > span {
+  color: #ffffff;
+  font-size: 1.4rem;
+  padding: 0 0 20px 0;
+}
+
+footer > .second-content > .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+  padding: 0 0 20px 0;
+}
+
+footer > .second-content > .info > a {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+footer > .second-content > .move-top {
+  color: #05b993;
+  font-size: 3rem;
+}

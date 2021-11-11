@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="publico/base/base.css">
+<link rel="stylesheet" href="publico/layout/footer.css">
+
 <div class="first-content">
     <div class="conheca">
         <h4>Conheça-nos</h4>
@@ -26,10 +29,13 @@
         <a href="#">Cartões de crédito, cartões de débito e Boleto</a>
     </div>
 </div>
+
 <div class="second-content">
     <div class="logo">
-        <img src="images/logo300px.png" alt="Foto da logo">
-    </div>    
+        <a href="#"><ion-icon name="book"></ion-icon></a>
+        <a href="#"><span>Grapes Ebook</span></a>
+    </div>
+
     <div class="info">
         <a href="#">Condições de Uso</a>
         <a href="#">Politicas de vendas</a> 

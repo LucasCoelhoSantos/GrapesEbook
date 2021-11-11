@@ -1,0 +1,74 @@
+header {
+  background-color: #694fb4;
+}
+
+header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  max-width: 980px;
+}
+
+header > .container > .left-logo {
+  align-items: center;
+  display: flex;
+}
+
+header > .container > .left-logo > a > ion-icon {
+  font-size: 3rem;
+  color: #ffffff;
+  padding: 5px 0 0 0;
+}
+
+header > .container > .left-logo > a > span {
+  color: #ffffff;
+  font-size: 1.4rem;
+  padding: 0 0 0 20px;
+}
+
+/*==============
+ARRUMAR MENU SANDUICHE AO ABRIR
+==============*/
+header > .container > .menu-section > .middle-menu-bar > ul {
+  display: flex;
+}
+
+header > .container > .menu-section > .middle-menu-bar > ul > li {
+  list-style: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header > .container > .menu-section > .middle-menu-bar > ul > li > a {
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 300ms linear 0s;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+header > .container > .menu-section > .middle-menu-bar > ul > li > a:hover {
+  background-color: #9a85d4;
+}
+
+header > .container > .right-profile {
+  background-color: #ffffff;
+  text-align: center;
+  min-width: 90px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+header > .container > .right-profile > a,
+header > .container > .right-profile > a > img {
+  vertical-align: middle;
+  height: 50px;
+  padding: 5px;
+}
+
+header > .container > .right-profile > a > ion-icon {
+  font-size: 1.3rem;
+}

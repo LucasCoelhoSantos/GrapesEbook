@@ -48,5 +48,4 @@ Route::add('/.*', function () {
 
 // Inicia o router
 Route::run(BASEPATH);
-
 ?>
