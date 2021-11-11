@@ -4,6 +4,7 @@
 <head>
     <?php include('app/visao/head.php') ?>
     <title>Lista</title>
+    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
 </head>
 
 <body class="flex justify-center">

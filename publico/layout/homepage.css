@@ -6,6 +6,8 @@ main > section {
   text-align: center;
   justify-items: center;
   align-content: center;
+
+  background-color: #bf8bff;
 }
 
 main > section > .container {
@@ -30,12 +32,14 @@ main > section > .container > .slogan > h2:last-child {
 
 main > section > .container > .illustration > img {
   height: 450px;
+  background-color:#694fb4;
 }
 
 main > .search-bar {
   padding: 5% 25% 5% 25%;
   display: flex;
   align-items: center;
+  background-color: #694fb4;
 
   justify-content: center;
 }
