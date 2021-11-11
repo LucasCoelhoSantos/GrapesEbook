@@ -10,7 +10,6 @@ main > section {
 
 main > section > .container {
   max-width: 980px;
-  flex-direction: column;
   padding: 25px;
 }
 
@@ -53,7 +52,7 @@ main > .search-bar > input {
 
 main > .search-bar > button {
   background-color: #ffffff;
-  height: 34px;
+  height: 35px;
   min-width: 35px;
   border: 1px solid #000000;
   border-left: 0;
@@ -62,6 +61,9 @@ main > .search-bar > button {
   align-items: center;
 }
 
+/*
+TO FIX - AQUI VAI OS LIVROS EM DESTAQUE
+*/
 main > .cards {
   display: flex;
   flex-direction: column;

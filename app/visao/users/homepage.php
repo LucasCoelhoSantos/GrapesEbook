@@ -32,6 +32,12 @@
             <button><ion-icon name="search-outline"></ion-icon></button>
         </div>
 
+        <!-- 
+            TO DO - AQUI VAI OS EBOOKS EM DESTAQUE, ARRUMAR OS LIVROS DISPONIVEIS E RELACIONAR COM O BANCO DE DADOS.
+            NO MOMENTO É APENAS UM VISUAL DO QUE SERÁ APRESENTADO.
+
+            TO FIX - CONTAINER ONDE FICARA OS EBOOKS NÃO ESTÁ RESPONSIVO.
+        -->
         <section class="cards">
             <div class="recommendation">
                 <h2>Recomendações</h2>
@@ -52,9 +58,9 @@
                         </div>
                     </div>
                     <div class="product">
-                        <img src="" alt="">
+                        <img src="images/ebook-os-miseraveis" alt="Os Miseráveis">
                         <div class="product-information">
-                            <h3></h3>
+                            <h3>Os Miseráveis</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
@@ -67,23 +73,23 @@
                 <div class="showcase">
                     <button><ion-icon name="arrow-back"></ion-icon></button>
                     <div class="product">
-                        <img src="" alt="">
+                        <img src="images/ebook-viagens-de-guliver" alt="Viagens de Guliver">
                         <div class="product-information">
-                            <h3></h3>
+                            <h3>Viagens de Guliver</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
                     <div class="product">
-                        <img src="" alt="">
+                        <img src="images/ebook-dom-casmurro" alt="Dom Casmurro">
                         <div class="product-information">
-                            <h3></h3>
+                            <h3>Dom Casmurro</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
                     <div class="product">
-                        <img src="" alt="">
+                        <img src="images/ebook-o-pai" alt="O pai">
                         <div class="product-information">
-                            <h3></h3>
+                            <h3>O pai</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
