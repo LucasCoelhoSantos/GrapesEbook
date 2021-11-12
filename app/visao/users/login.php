@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
     <link rel="stylesheet" href="<?= BASEPATH ?>/publico/layout/login.css">
     <title>Login</title>
+    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
 </head>
 
 <body>
