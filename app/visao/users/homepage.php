@@ -15,7 +15,7 @@
 
     <main>
         <section>
-            <div class="container">
+            <div class="presentation">
                 <div class="slogan">
                     <h2>Os verdadeiros analfabetos são os que aprenderam a ler e não leem</h2>
                     <h2>Uma plataforma para todos os gostos de leitura</h2>
@@ -28,7 +28,7 @@
         </section>
 
         <div class="search-bar">
-            <input type="text" placeholder="Procure pelo nome de um e-book!"/>
+            <input type="text" placeholder="Procure pelo nome ou autor de um e-book!"/>
             <button><ion-icon name="search-outline"></ion-icon></button>
         </div>
 
@@ -38,10 +38,11 @@
 
             TO FIX - CONTAINER ONDE FICARA OS EBOOKS NÃO ESTÁ RESPONSIVO.
         -->
-        <section class="cards">
+        <section class="ebooks">
+            <!--slider-products-->
             <div class="recommendation">
                 <h2>Recomendações</h2>
-                <div class="showcase">
+                <div class="products">
                     <button><ion-icon name="arrow-back"></ion-icon></button>
                     <div class="product">
                         <img src="images/ebook-o-reino-da-rosa-negra.png" alt="O reino da rosa negra">
@@ -70,7 +71,7 @@
 
             <div class="best-sellers">
                 <h2>Mais vendidos</h2>
-                <div class="showcase">
+                <div class="products">
                     <button><ion-icon name="arrow-back"></ion-icon></button>
                     <div class="product">
                         <img src="images/ebook-viagens-de-guliver" alt="Viagens de Guliver">
@@ -103,6 +104,7 @@
         <?php include('app/visao/users/footer.php')?>
     </footer>
 
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="scripts\ebooks.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>

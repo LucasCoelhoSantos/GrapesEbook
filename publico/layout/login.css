@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body {
+  background-color: #372584;
+}
+
+main > .listar {
+  display: flex;
+  justify-content: end;
+  padding: 20px 20px 0 0;
+}
+
+main > .login,
+main > .register {
+  display: flex;
+  justify-content: center;
+  padding: 20vh 0 20vh 0;
+}
+
+main > div > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+  min-height: 250px;
+  background-color: #694fb4;
+  border-radius: 10px;
+}
+
+main > div > form > div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+}
+
+main > div > form > div > label {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+main > div > form > div > input {
+  font-size: 1.2rem;
+  min-width: 250px;
+}
+
+main > div > form > .buttons {
+  min-width: 250px;
+  align-items: center;
+  margin: auto;
+}
+
+main > div > form > .buttons > button {
+  font-size: 1.2rem;
+  min-width: 150px;
+}
+
+main > div > form > .buttons > a {
+  font-size: 1.4rem;
+  padding: 20px 0 10px 0;
+}

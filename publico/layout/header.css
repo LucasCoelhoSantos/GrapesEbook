@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 header {
   background-color: #694fb4;
 }
@@ -17,7 +19,7 @@ header > .container > .left-logo {
 }
 
 header > .container > .left-logo > a > ion-icon {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #ffffff;
   padding: 5px 0 0 0;
 }
@@ -25,7 +27,7 @@ header > .container > .left-logo > a > ion-icon {
 header > .container > .left-logo > a > span {
   color: #ffffff;
   font-size: 1.4rem;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 15px;
 }
 
 /*==============
@@ -65,10 +67,9 @@ header > .container > .right-profile {
 header > .container > .right-profile > a,
 header > .container > .right-profile > a > img {
   vertical-align: middle;
-  height: 50px;
   padding: 5px;
 }
 
 header > .container > .right-profile > a > ion-icon {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }

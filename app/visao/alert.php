@@ -9,5 +9,5 @@
 <script>
     setTimeout(() => {
         document.getElementById('alert').remove();
-    }, 5000);
+    }, 3000);
 </script>

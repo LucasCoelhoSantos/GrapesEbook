@@ -25,14 +25,15 @@ class Database {
                 senha TEXT 
             )
         ');
+
         $con->exec('
             CREATE TABLE IF NOT EXISTS Produtos (
                 id INT PRIMARY KEY,
                 nome  TEXT,
-                descricao TEXT
+                descricao TEXT,
+                preco float
             )
         ');
     }
 }
-
 ?>

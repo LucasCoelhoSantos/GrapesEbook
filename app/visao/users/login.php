@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <?php include('app/visao/head.php') ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
+    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/layout/login.css">
     <title>Login</title>
 </head>
 
-<body class="flex items-center justify-center">
+<body>
     <header>
-    <a href="<?= BASEPATH ?>homepage">Homepage</a>    
+        <?php include('app/visao/users/header.php')?>   
     </header>
-    <a href="<?= BASEPATH ?>user/list" class="absolute right-0 top-0 text-white font-bold mt-6 mr-6 cursor-pointer leading-none">
-        <div class="flex items-center">
-            <ion-icon name="list-outline" class="text-2xl pr-1"></ion-icon>
-            <div>Listar usuários</div>
-        </div>
-    </a>
 
-    <form class="bg-white shadow-md rounded px-8 py-10 mb-4" method="POST">
-        <?php require 'app/visao/alert.php' ?>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                Email
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="meu@email.com" value="<?= $_GET['email'] ?>" required>
+    <main>
+        <div class="listar">
+            <a href="<?= BASEPATH ?>user/list"><ion-icon name="list"></ion-icon></a>
+            <a href="<?= BASEPATH ?>user/list"><span>Listar usuários</span></a>
         </div>
-        <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                Senha
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="senha" type="password" placeholder="******************" pattern=".{4,}" required>
+        
+        <div class="login">
+            <form method="POST">
+                <?php require 'app/visao/alert.php' ?>
+                
+                <div>
+                    <label class="email" for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="meu@email.com" value="<?= $_GET['email'] ?>" required>
+                </div>
+
+                <div>
+                    <label class="password" for="password">Senha</label>
+                    <input id="password" name="senha" type="password" placeholder="********" pattern=".{4,}" required>
+                </div>
+
+                <div class="buttons">
+                    <button type="submit">Entrar</button>
+                    <a href="<?= BASEPATH ?>register">Desejo me cadastrar.</a>
+                </div>
+            </form>
         </div>
-        <div class="flex items-center justify-between">
-            <button class="font-bold text-white bg-primary py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                Entrar
-            </button>
-            <a class="inline-block align-baseline font-bold text-sm text-primary hover:text-blue-800" href="<?= BASEPATH ?>register">
-                Desejo me cadastrar.
-            </a>
-        </div>
-    </form>
+    </main>
+
+    <footer>
+        <?php include('app/visao/users/footer.php')?>
+    </footer>
 </body>
-
 </html>

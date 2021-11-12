@@ -97,12 +97,12 @@ class LoginController extends Controller {
         $this->view('users/listar', $usuarios);
     }
 
+    // Função que deleta usuários da plataforma
     public function deletar() {
-        // TODO - Primeiro você deve buscar pelo usuário com email informado e armazenar em $usuario (sugestão).
         $usuario = Usuario::buscarUsuario($_POST['email']);
 
         try {
-            $usuario->deletar(); // TODO - Nome de método sugerido e já definido em Usuário (devendo implementá-lo)
+            $usuario->deletar();
             header('Location: ' . BASEPATH . 'user/list?mensagem=Usuário deletado com sucesso!');
         } catch (PDOException $erro) {
             header('Location: ' . BASEPATH . 'user/list?mensagem=Erro ao deletar ' . $_GET["email"] . ' !');

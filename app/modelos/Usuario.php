@@ -4,7 +4,9 @@ namespace App\Modelos;
 
 use App\Database;
 
-// Classe reponsável por representar os dados de um usuário na aplicação
+/**
+ * Classe reponsável por representar os dados de um usuário na aplicação
+ */
 class Usuario {
     /**
      * @var string Email do usuário
@@ -60,7 +62,9 @@ class Usuario {
         $stm->execute();
     }
 
-    // Função que busca por um usuário a partir do email fornecido e caso não exista, retorna NULL.
+    /**
+     * Função que busca por um usuário a partir do email fornecido e caso não exista, retorna NULL.
+     */ 
     static public function buscarUsuario($email): Usuario {
         $con = Database::getConnection();
         $stm = $con->prepare('SELECT email, nome, senha FROM Usuarios WHERE email = :email');

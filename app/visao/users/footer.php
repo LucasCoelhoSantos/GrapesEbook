@@ -32,8 +32,8 @@
 
 <div class="second-content">
     <div class="logo">
-        <a href="#"><ion-icon name="book"></ion-icon></a>
-        <a href="#"><span>Grapes Ebook</span></a>
+        <a href="<?= BASEPATH ?>homepage"><ion-icon name="book"></ion-icon></a>
+        <a href="<?= BASEPATH ?>homepage"><span>Grapes Ebook</span></a>
     </div>
 
     <div class="info">
@@ -43,3 +43,5 @@
         <a href="#">Cookies</a>
     </div>
 </div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

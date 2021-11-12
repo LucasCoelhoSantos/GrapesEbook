@@ -1,43 +1,42 @@
+@charset "UTF-8";
+
 main > section {
   display: flex;
   justify-content: center;
-
-  align-items: center;
-  text-align: center;
-  justify-items: center;
-  align-content: center;
+  background-color: #bf8bff;
 }
 
-main > section > .container {
+main > section > .presentation {
   max-width: 980px;
   padding: 25px;
 }
 
-main > section > .container > .slogan {
+main > section > .presentation > .slogan {
   padding: 25px;
   text-align: center;
   font-size: 1.2rem;
 }
 
-main > section > .container > .slogan > h2 {
+main > section > .presentation > .slogan > h2 {
   padding: 0.5em 0;
   border-bottom: 1px solid #cccccc;
 }
 
-main > section > .container > .slogan > h2:last-child {
+main > section > .presentation > .slogan > h2:last-child {
   border-bottom: 0;
 }
 
-main > section > .container > .illustration > img {
+main > section > .presentation > .illustration > img {
   height: 450px;
+  background-color: #694fb4;
 }
 
 main > .search-bar {
-  padding: 5% 25% 5% 25%;
+  padding: 5% 25% 0 25%;
   display: flex;
   align-items: center;
-
   justify-content: center;
+  background-color: #694fb4;
 }
 
 main > .search-bar > input {
@@ -62,26 +61,33 @@ main > .search-bar > button {
 }
 
 /*
-TO FIX - AQUI VAI OS LIVROS EM DESTAQUE
+AQUI VAI OS LIVROS EM DESTAQUE
+TO FIX - CORRIGIR O LAYOUT E CRIAR CONEXÃO COM BANDO DE DADOS
 */
-main > .cards {
+main > .ebooks {
   display: flex;
   flex-direction: column;
+
   padding: 25px;
 }
 
-main > .cards > div > .showcase {
+main > .ebooks > div > h2 {
+  font-size: 2rem;
+  text-align: left;
+  padding: 20px 0 20px 0;
+}
+
+main > .ebooks > div > .products {
   background-color: #694fb4;
   border-radius: 4px;
-  min-width: 980px;
+  max-width: 980px;
   min-height: 250px;
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
 
-main > .cards > div > .showcase > button {
+main > .ebooks > div > .products > button {
   background-color: #bf8bff;
   align-items: center;
   border-radius: 30%;
@@ -89,22 +95,24 @@ main > .cards > div > .showcase > button {
   justify-content: center;
 }
 
-main > .cards > div > .showcase > button > ion-icon {
-  font-size: 35px;
+main > .ebooks > div > .products > button > ion-icon {
+  font-size: 2.25rem;
   color: #ffffff;
 }
 
-main > .cards > div > .showcase > .product {
+main > .ebooks > div > .products > .product {
   padding: 15px;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
 }
 
-main > .cards > div > .showcase > .product > img {
+main > .ebooks > div > .products > .product > img {
   height: 200px;
   padding: 15px;
 }
 
-main > .cards > div > .showcase > .product > .product-information > h3,
-main > .cards > div > .showcase > .product > .product-information > span {
+main > .ebooks > div > .products > .product > .product-information > h3,
+main > .ebooks > div > .products > .product > .product-information > span {
   color: #ffffff;
   font-size: 1.2rem;
 }

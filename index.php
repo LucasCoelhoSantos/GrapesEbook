@@ -21,20 +21,20 @@ use Steampixel\Route;
 Database::createSchema();
 
 // Cria uma instância do controlador para uso
-$controller = new LoginController();
-$controller2 = new HomepageController();
+$controller1 = new HomepageController();
+$controller2 = new LoginController();
 
 // Parte responsável pelo direcionamento das requisições aos respectivos métodos do controlador.
-Route::add('/homepage', fn () => $controller2->homepageIndex(), ['get']);
-Route::add('/login', fn () => $controller->loginIndex(), ['get']);
-Route::add('/register', fn () => $controller->cadastrarIndex(), ['get']);
-Route::add('/user/info', fn () => $controller->info(), ['get']);
-Route::add('/user/list', fn () => $controller->listar(), ['get']);
+Route::add('/homepage', fn () => $controller1->homepageIndex(), ['get']);
+Route::add('/login', fn () => $controller2->loginIndex(), ['get']);
+Route::add('/register', fn () => $controller2->cadastrarIndex(), ['get']);
+Route::add('/user/info', fn () => $controller2->info(), ['get']);
+Route::add('/user/list', fn () => $controller2->listar(), ['get']);
 
-Route::add('/login', fn ()  => $controller->login(), ['post']);
-Route::add('/register', fn ()  => $controller->cadastrar(), ['post']);
-Route::add('/logout', fn () => $controller->sair(), ['post']);
-Route::add('/user/remove', fn ()  => $controller->deletar(), ['post']);
+Route::add('/login', fn ()  => $controller2->login(), ['post']);
+Route::add('/register', fn ()  => $controller2->cadastrar(), ['post']);
+Route::add('/logout', fn () => $controller2->sair(), ['post']);
+Route::add('/user/remove', fn ()  => $controller2->deletar(), ['post']);
 
 // Rota auxiliar para redirecionar o usuário.
 Route::add('/', function () {

@@ -3,7 +3,6 @@
 namespace App\Controladores;
 
 // Esta classe é responsável por chamar a view correta passando os dados que serão usados.
-
 abstract class Controller {
     /** Este método chama uma determinada view (página).
      * 
@@ -14,5 +13,4 @@ abstract class Controller {
         require __DIR__ . '/../visao/' . $view . '.php';
     }
 }
-
 ?>

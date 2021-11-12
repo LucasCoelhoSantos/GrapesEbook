@@ -3,8 +3,8 @@
 
 <div class="container">
     <div class="left-logo">
-        <a href="#"><ion-icon name="book"></ion-icon></a>
-        <a href="#"><span>Grapes Ebook</span></a>
+        <a href="<?= BASEPATH ?>homepage"><ion-icon name="book"></ion-icon></a>
+        <a href="<?= BASEPATH ?>homepage"><span>Grapes Ebook</span></a>
     </div>
 
     <div class="menu-section">
@@ -16,7 +16,7 @@
 
         <nav class="middle-menu-bar">
             <ul>
-                <li><a href="#">Início</a></li>
+                <li><a href="<?= BASEPATH ?>homepage">Início</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Pagamentos</a></li>
@@ -39,4 +39,3 @@
 
 <script src="scripts\header.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
