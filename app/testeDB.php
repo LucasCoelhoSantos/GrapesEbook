@@ -49,7 +49,7 @@ class Database {
      * Define a tabela, instancia e conexao
      * @param string table
      */
-    public function __construct($table){
+    public function __construct($table) {
         $this->table = $table;
         $this->setConnection();
     }
@@ -57,12 +57,12 @@ class Database {
     /**
      * Método responsável por definir uma instancia do PDO e criar uma conexão com o banco de dados
      */
-    private function setConnection(){
-        try{
+    private function setConnection() {
+        try {
             $this->connection = new PDO('mysql:host='.self::host.';dbname='.self::name,self::user,self::password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }
-        catch(PDOException $e){
+        catch(PDOException $e) {
             die('ERROR '.$e->getMessage());
         }
     }
