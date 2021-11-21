@@ -22,16 +22,16 @@ class Database {
             CREATE TABLE IF NOT EXISTS Usuarios (
                 nome  TEXT,
                 email TEXT PRIMARY KEY,
-                senha TEXT 
+                senha TEXT
             )
         ');
 
         $con->exec('
             CREATE TABLE IF NOT EXISTS Produtos (
-                id INT PRIMARY KEY,
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome  TEXT,
                 descricao TEXT,
-                preco float
+                preco FLOAT
             )
         ');
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modelos;
+namespace App\Models;
 
 use App\Database;
 
@@ -104,7 +104,6 @@ class Usuario {
 
     // Função que deleta um usuário no banco.
     public function deletar() {
-        // TODO - Implementar a lógica de remoção do usuário no banco (com inspiração no método "salvar")
         $con = Database::getConnection();
         $stm = $con->prepare('DELETE FROM Usuarios WHERE email = :email');
         $stm->bindValue(':email', $this->email);

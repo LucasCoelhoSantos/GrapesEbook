@@ -8,27 +8,27 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 
 ## Histórias de Usuário
 
-- [x] Navegar por uma lista de produtos
-- [x] Buscar por produtos através do nome
-- [x] Visualizar detalhes de um produto
+- [ ] Navegar por uma lista de produtos
+- [ ] Buscar por produtos através do nome
+- [ ] Visualizar detalhes de um produto
 - [ ] Navegar por categorias
-- [x] Adicionar produtos à sacola de compras
-- [x] Finalizar uma compra
+- [ ] Adicionar produtos à sacola de compras
+- [ ] Finalizar uma compra
 
 ## Histórias Bônus
 
 - [ ] Avaliar produtos
 - [ ] Receber recomendações de produtos
 - [ ] Fazer buscas avançadas
-- [x] Se cadastrar para receber novidades
+- [ ] Se cadastrar para receber novidades
 
 ## Plataformas para inspiração
 
+- [Amazon](https://www.amazon.com)
 - [Americanas](https://www.americanas.com.br)
 - [Magazine Luiza](https://www.magazineluiza.com.br)
 - [Mercado Livre](https://www.mercadolivre.com.br)
 - [OLX](https://www.olx.com.br)
-- [Amazon](https://www.amazon.com)
 
 ## Tecnologias Utilizadas
 

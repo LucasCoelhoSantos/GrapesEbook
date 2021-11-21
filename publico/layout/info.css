@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+main {
+  padding-bottom: 40px;
+}
+
+main > .cadastrar-produtos {
+  display: flex;
+  justify-content: end;
+  padding: 20px 20px 0 0;
+}
+
+main > .informacao {
+  display: flex;
+  justify-content: center;
+}
+
+main > div > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  max-width: 800px;
+  background-color: #694fb4;
+  border-radius: 30px;
+}
+
+main > div > form > div {
+  color: #ffffff;
+  padding: 20px 0 20px 0;
+}
+
+main > div > form > div > button {
+  color: #ffffff;
+  background-color: #9a85d4;
+}

@@ -32,7 +32,7 @@ main > section > .presentation > .slogan > h2:last-child {
 
 main > section > .presentation > .illustration > img {
   height: 450px;
-  background-color: #694fb4;
+  /*background-color: #694fb4;*/
 }
 
 main > .search-bar {
@@ -40,7 +40,7 @@ main > .search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #694fb4;
+  /*background-color: #694fb4;*/
 }
 
 main > .search-bar > input {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include('app/visao/head.php') ?>
+    <?php include('app/views/head.php') ?>
     <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
     <title>Lista</title>
 </head>

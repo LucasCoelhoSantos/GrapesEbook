@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controladores;
+namespace App\Controllers;
 
-use App\Modelos\Usuario;
+use App\Models\Usuario;
 use PDOException;
 
 // Classe responsável pela gestão das atividades relacionadas ao usuário. Principalmente ao login e cadastro.
@@ -30,6 +30,11 @@ class LoginController extends Controller {
         if (!$this->loggedUser) {
             $this->view('users/login');
         }
+        /* TO DO - Se o usuário for supoer@login.com, permitir que este cadastre, altere e exclua produtos.
+        if ($this->loggedUser = 'suporte@login.com') {
+            $this->view('product/register');
+        }
+        */
         else {
             header('Location: ' . BASEPATH . 'user/info');
         }
@@ -52,7 +57,7 @@ class LoginController extends Controller {
     }
 
     // Função que renderiza a página (visão) de cadastro
-    public function cadastrarIndex(): void {
+    public function cadastrarUsuarioIndex(): void {
         $this->view('users/cadastrar');
     }
 
@@ -60,7 +65,7 @@ class LoginController extends Controller {
      *  Função que trata de cadastrar um novo usuário na base de dados (atualmente na sessão).
      *  Verifica se o email já está cadastrado, se sim, informa o usuário.
      */
-    public function cadastrar(): void {
+    public function cadastrarUsuario(): void {
         try {
             $user = new Usuario($_POST['email'], $_POST['senha'], $_POST['nome']);
             $user->salvar();

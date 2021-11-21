@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controladores;
+namespace App\Controllers;
 
 // Esta classe é responsável por chamar a view correta passando os dados que serão usados.
 abstract class Controller {
@@ -10,7 +10,8 @@ abstract class Controller {
      * @param array $data São os dados que serão exibidos na view.
      */
     public function view(string $view, $data = []): void {
-        require __DIR__ . '/../visao/' . $view . '.php';
+        require __DIR__ . '/../views/' . $view . '.php';
     }
 }
+
 ?>

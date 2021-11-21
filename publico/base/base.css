@@ -2,9 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');*/
 
-/*=============================
-RESET
-=============================*/
+/*RESET*/
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +16,8 @@ html {
 
 html,
 body {
-  /*font-family: 'Poppins', sans-serif;*/
+  /*Trocar a fonte do projeto em breve
+  font-family: 'Poppins', sans-serif;*/
   font-family: "Roboto", sans-serif;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
@@ -31,41 +30,15 @@ body {
 }
 
 /*=============================
-TRECHO FORNECIDO PELO PROFESSOR
-=============================*/
-body > form {
-  width: 550px;
-  margin-top: -10vh;
-}
-
-body > form > div > .text-primary {
-  color: #bf8bff;
-}
-
-body > form > div > .bg-primary {
-  background-color: #bf8bff;
-}
-
-body > .delete-form {
-  width: auto;
-  margin-top: auto;
-}
-
-/*=============================
 MEDIA QUERIES
 =============================*/
 @media (max-width: 425px) {
   main > section > .presentation > .illustration > img {
     height: 125px;
   }
-
-  main > .ebooks > div > .products {
-    max-width: 375px;
-  }
-
-  main > .ebooks > div > .products > .product > img {
-    height: 125px;
-  }
+  /*
+  main > .ebooks > div > .showcase {
+  }*/
 }
 
 @media (max-width: 600px) {

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <?php include('app/visao/users/header.php')?>
+        <?php include('app/views/layout/header.php')?>
     </header>
 
     <main>
@@ -101,7 +101,7 @@
     </main>
 
     <footer>
-        <?php include('app/visao/users/footer.php')?>
+        <?php include('app/views/layout/footer.php')?>
     </footer>
 
     <script src="scripts\ebooks.js"></script>
