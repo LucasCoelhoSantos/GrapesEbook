@@ -28,8 +28,8 @@
     <div class="right-profile">
         <a href="#"><ion-icon name="cart"></ion-icon></a>
         <a href="<?= BASEPATH ?>login"><ion-icon name="person"></ion-icon></a>
-        <!-- TO DO
-        Esta parte será aplicada quando o usuário fizer login
+        <!--
+        TO DO - Esta parte será aplicada quando o usuário fizer login
         <a href="<.?= BASEPATH ?>login">
             <img src="images/profile_icon_1.png" alt="foto de perfil" name="menu-outline">
         </a>

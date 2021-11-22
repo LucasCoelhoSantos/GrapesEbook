@@ -42,10 +42,10 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 ### Alunos do grupo 007
 
 - [Christian Nilles](https://github.com/ChristianNilles)
-- [Guilherme Augusto Soares]()
+- [Guilherme Augusto Soares]() Aluno participou apenas da prototipação das telas
 - [Lucas Coelho Santos](https://github.com/LucasCoelhoSantos)
 - [Lucas de Carvalho Vilela Welter](https://github.com/boltwelter123)
-- [Manuel Neto]()
+- [Manuel Augusto Neto]() Aluno participou apenas da prototipação das telas
 
 ### Professor
 

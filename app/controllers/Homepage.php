@@ -6,7 +6,7 @@ use App\Models\Usuario;
 use App\Models\Produto;
 use PDOException;
 
-// Classe responsável pela gestão das atividades relacionadas a homepage. Principalmente ???.
+// Classe responsável pela gestão das atividades relacionadas a homepage.
 class HomepageController extends Controller {
     
     /**
@@ -47,4 +47,5 @@ class HomepageController extends Controller {
         }
     }
 }
+
 ?>

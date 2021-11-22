@@ -21,8 +21,6 @@
         
         <div class="login">
             <form method="POST">
-                <!--<.?php require 'app/views/alert.php' ?>-->
-                
                 <div>
                     <label class="email" for="email">Email</label>
                     <input id="email" name="email" type="email" placeholder="exemplo@email.com"  required>

@@ -16,8 +16,6 @@
     <main>
         <div class="register">
             <form method="POST">
-                <!--<.?php require 'app/visao/alert.php' ?>-->
-
                 <div>
                     <label class="name" for="name">Nome</label>
                     <input id="name" name="nome" type="text" placeholder="Seu nome" pattern=".{4,}" required>

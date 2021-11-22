@@ -6,6 +6,7 @@ error_reporting(E_ALL ^ E_WARNING);
 define('BASEPATH', '/progweb/GrapesEbook/');
 
 include_once __DIR__ . '/app/Database.php';
+include_once __DIR__ . '/libs/Route.php';
 
 include_once __DIR__ . '/app/controllers/Controlador.php';
 include_once __DIR__ . '/app/controllers/Homepage.php';
@@ -14,7 +15,6 @@ include_once __DIR__ . '/app/controllers/Produto.php';
 
 include_once __DIR__ . '/app/models/Usuario.php';
 include_once __DIR__ . '/app/models/Produto.php';
-include_once __DIR__ . '/libs/Route.php';
 
 use App\Database;
 use App\Controllers\HomepageController;
@@ -39,7 +39,9 @@ Route::add('/login', fn () => $controller2->loginIndex(), ['get']);
 Route::add('/register', fn () => $controller2->cadastrarUsuarioIndex(), ['get']);
 Route::add('/user/info', fn () => $controller2->info(), ['get']);
 Route::add('/user/list', fn () => $controller2->listar(), ['get']);
-/* TO DO - Rota que direciona a view de cadastro de um produto
+
+/*
+TO DO - Rota que direciona a view de cadastro de um produto
 Route::add('/product/register', fn() => $controller2->produtoIndex(), ['get']);
 */
 

@@ -5,7 +5,9 @@ namespace App\Controllers;
 use App\Modelos\Produto;
 use PDOException;
 
-/*if $usuario => $usuario->email != "suporte@login.com";*/
+/**
+ * TO DO - Se o usuário for suporte@login.com, permitir que este cadastre, altere e exclua produtos.
+ */
 class ProdutoController extends Controller {
 
     /**

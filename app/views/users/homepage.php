@@ -33,10 +33,9 @@
         </div>
 
         <!-- 
-            TO DO - AQUI VAI OS EBOOKS EM DESTAQUE, ARRUMAR OS LIVROS DISPONIVEIS E RELACIONAR COM O BANCO DE DADOS.
-            NO MOMENTO É APENAS UM VISUAL DO QUE SERÁ APRESENTADO.
+            TO DO - Aqui os ebooks em destaque, arrumar os livros disponíveis e relacionar com o banco de dados. No momento é apenas um visual do que será apresentado.
 
-            TO FIX - CONTAINER ONDE FICARA OS EBOOKS NÃO ESTÁ RESPONSIVO.
+            TO FIX - Container onde ficará os ebooks não está responsivo.
         -->
         <section class="ebooks">
             <!--slider-products-->

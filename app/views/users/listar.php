@@ -13,6 +13,7 @@
             <div>Voltar</div>
         </div>
     </a>
+    
     <table class="table-auto text-white w-3/4 md:w-9/10 mt-24">
         <thead>
             <tr class="border bg-white text-primary">
@@ -22,6 +23,7 @@
                 <th class="px-2 py-2">Ação</th>
             </tr>
         </thead>
+
         <tbody class="bg-white text-gray-700">
             <?php if (is_null($data) || count($data) === 0) { ?>
                 <tr>
@@ -44,7 +46,6 @@
                     </tr>
                 <?php } ?>
             <?php } ?>
-
         </tbody>
     </table>
 </body>

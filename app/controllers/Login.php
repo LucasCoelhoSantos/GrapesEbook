@@ -30,10 +30,10 @@ class LoginController extends Controller {
         if (!$this->loggedUser) {
             $this->view('users/login');
         }
-        /* TO DO - Se o usuário for supoer@login.com, permitir que este cadastre, altere e exclua produtos.
-        if ($this->loggedUser = 'suporte@login.com') {
+        /* TO DO - Se o usuário logado for o email suporte@login.com, disponibiliza funcionalidades de administrador como: cadastrar, atualizar e remover produtos.
+        if ($usuario => $usuario->email != "suporte@login.com"){
             $this->view('product/register');
-        }
+        };
         */
         else {
             header('Location: ' . BASEPATH . 'user/info');
