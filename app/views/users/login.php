@@ -13,12 +13,7 @@
         <?php include('app/views/layout/header.php')?>   
     </header>
 
-    <main>
-        <div class="listar">
-            <a href="<?= BASEPATH ?>user/list"><ion-icon name="list"></ion-icon></a>
-            <a href="<?= BASEPATH ?>user/list"><span>Listar usuários</span></a>
-        </div>
-        
+    <main>        
         <div class="login">
             <form method="POST">
                 <div>

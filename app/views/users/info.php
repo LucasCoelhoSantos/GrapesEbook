@@ -16,9 +16,18 @@
     </header>
     
     <main>
-        <div class="cadastrar-produtos">
-            <a href="<?= BASEPATH ?>product/register"><ion-icon name="create"></ion-icon></a>
-            <a href="<?= BASEPATH ?>product/register"><span>Cadastrar Produto</span></a>
+        <div class="administracao">
+            <div class="listar-usuarios">
+                <a href="<?= BASEPATH ?>user/list"><ion-icon name="list"></ion-icon><span>Listar usuários</span></a>
+            </div>
+            
+            <div class="cadastrar-produtos">
+                <a href="<?= BASEPATH ?>product/register"><ion-icon name="create"></ion-icon><span>Cadastrar produto</span></a>
+            </div>
+            
+            <div class="listar-produtos">
+                <a href="<?= BASEPATH ?>product/list"><ion-icon name="list"></ion-icon><span>Listar produtos</span></a>
+            </div>
         </div>
 
         <div class="informacao">

@@ -4,42 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
     <link rel="stylesheet" href="<?= BASEPATH ?>/publico/layout/list.css">
-    <title>Usuários Cadastrados</title>
+    <title>Produtos Cadastrados</title>
 </head>
 
 <body>
     <div class="back">
-        <a href="<?= BASEPATH ?>login"><ion-icon name="arrow-back"></ion-icon><span>Voltar</span></a>
+        <a href="<?= BASEPATH ?>user/info"><ion-icon name="arrow-back"></ion-icon><span>Voltar</span></a>
     </div>
-
+    
     <div class="table">
         <table>
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Nome</th>
-                    <th>Email</th>
-                    <th>Senha</th>
-                    <th>Ação</th>
+                    <th>Autor</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
                 </tr>
             </thead>
 
             <tbody>
                 <?php if (is_null($data) || count($data) === 0) { ?>
                     <tr>
-                        <td colspan="4">Nenhum usuário cadastrado ainda :(</td>
+                        <td colspan="6">Nenhum produto cadastrado ainda :(</td>
                     </tr>
                 <?php } else { ?>
-                    <?php foreach ($data as $user) { ?>
+                    <?php foreach ($data as $product) { ?>
                         <tr>
-                            <td><?= $user->nome ?></td>
-                            <td><?= $user->email ?></td>
-                            <td><?= $user->senha ?></td>
+                            <td><?= $product-> id?></td>
+                            <td><?= $product-> nome?></td>
+                            <td><?= $product-> autor?></td>
+                            <td><?= $product-> descricao?></td>
+                            <td><?= $product-> preco?></td>
+                            <td><?= $product-> quantidade?></td>
                             <td>
-                                <form action="<?= BASEPATH ?>user/remove" method="POST" class="delete-form">
-                                    <input type="hidden" name="email" value="<?= $user->email ?>">
+                                <form action="<?= BASEPATH ?>product/remove" method="POST">
+                                    <input type="hiden" value="<?= $product->id ?>">
                                     <button type="submit"><ion-icon name="close-outline"></ion-icon></button>
                                 </form>
                             </td>

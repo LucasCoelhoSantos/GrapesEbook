@@ -71,5 +71,10 @@ header > .container > .right-profile > a > img {
 }
 
 header > .container > .right-profile > a > ion-icon {
+  color: #694fb4;
   font-size: 1.4rem;
+}
+
+header > .container > .right-profile > a > ion-icon:hover {
+  color: #9a85d4;
 }

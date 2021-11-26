@@ -15,12 +15,14 @@ include_once __DIR__ . '/app/controllers/Produto.php';
 
 include_once __DIR__ . '/app/models/Usuario.php';
 include_once __DIR__ . '/app/models/Produto.php';
+include_once __DIR__ . '/app/models/Carrinho.php';
 
 use App\Database;
+use Steampixel\Route;
+
 use App\Controllers\HomepageController;
 use App\Controllers\LoginController;
 use App\Controllers\ProdutoController;
-use Steampixel\Route;
 
 // Cria o schema no banco de dados
 Database::createSchema();
@@ -32,26 +34,28 @@ $controller3 = new ProdutoController();
 
 // Parte responsável pelo direcionamento das requisições aos respectivos métodos do controlador.
 
-// ROUTE GET
+// ROUTE GET HOMEPAGE
 Route::add('/homepage', fn () => $controller1->homepageIndex(), ['get']);
 
+// ROUTE GET LOGIN
 Route::add('/login', fn () => $controller2->loginIndex(), ['get']);
 Route::add('/register', fn () => $controller2->cadastrarUsuarioIndex(), ['get']);
 Route::add('/user/info', fn () => $controller2->info(), ['get']);
 Route::add('/user/list', fn () => $controller2->listar(), ['get']);
 
-/*
-TO DO - Rota que direciona a view de cadastro de um produto
-Route::add('/product/register', fn() => $controller2->produtoIndex(), ['get']);
-*/
+// ROUTE GET PRODUCT
+Route::add('/product/register', fn() => $controller3->cadastrarProdutoIndex(), ['get']);
+Route::add('/product/list', fn() => $controller3->listarProdutos(), ['get']);
 
-// ROUTE POST
+// ROUTE POST LOGIN
 Route::add('/login', fn ()  => $controller2->login(), ['post']);
 Route::add('/register', fn ()  => $controller2->cadastrarUsuario(), ['post']);
 Route::add('/logout', fn () => $controller2->sair(), ['post']);
 Route::add('/user/remove', fn ()  => $controller2->deletar(), ['post']);
 
+// ROUTE POST PRODUCT
 Route::add('/product/register', fn() => $controller3->cadastrarProduto(), ['post']);
+Route::add('/product/remove', fn ()  => $controller3->deletarProduto(), ['post']);
 
 // Rota auxiliar para redirecionar o usuário.
 Route::add('/', function () {

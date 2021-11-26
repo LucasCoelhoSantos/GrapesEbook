@@ -28,8 +28,11 @@
         </section>
 
         <div class="search-bar">
-            <input type="text" placeholder="Procure pelo nome ou autor de um e-book!"/>
-            <button><ion-icon name="search-outline"></ion-icon></button>
+            <!--
+                TO DO - Buscar ebooks disponíveis com base no nome ou autor.
+            -->
+            <input type="search" placeholder="Procure pelo nome ou autor de um e-book!"/>
+            <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
         </div>
 
         <!-- 

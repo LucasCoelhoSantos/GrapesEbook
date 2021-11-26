@@ -30,8 +30,10 @@ class Database {
             CREATE TABLE IF NOT EXISTS Produtos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome  TEXT,
+                autor TEXT,
                 descricao TEXT,
-                preco FLOAT
+                preco FLOAT,
+                quantidade INTEGER
             )
         ');
     }

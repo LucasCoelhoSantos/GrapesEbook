@@ -24,6 +24,11 @@ class Usuario {
     private $nome;
 
     /**
+     * @var boolean Variável para verificar se o usuário é administrador
+     */
+    private $adm;
+
+    /**
      *  Contrutor da classe, responsável por inicializar os dados.
      *  A senha é codificada usando sha256.
      */
@@ -49,6 +54,15 @@ class Usuario {
      */
     public function igual(string $email, string $senha): bool {
         return $this->email === $email && $this->senha === hash('sha256', $senha);
+    }
+
+    /**
+     * Função que verifica se o usuário logado é administrador.
+     */
+    public function admUser(): bool {
+        if($this->email === "suporte@login.com" ) {
+            return $this->adm = TRUE;
+        }
     }
 
     // Função que salva os dados do usuário no banco de dados

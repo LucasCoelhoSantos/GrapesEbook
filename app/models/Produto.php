@@ -4,7 +4,9 @@ namespace App\Models;
 
 use App\Database;
 
-// Classe reponsável por representar os dados de um produto na aplicação
+/**
+ * Classe reponsável por representar os dados de um produto na aplicação
+ */
 class Produto {
     /**
      * @var integer Id do produto
@@ -17,6 +19,11 @@ class Produto {
     private $nome;
 
     /**
+     * @var string Autor do produto
+     */
+    private $autor;
+
+    /**
      * @var string Descrição do produto
      */
     private $descricao;
@@ -26,12 +33,19 @@ class Produto {
      */
     private $preco;
 
+    /**
+     * @var integer Quantidade do produto
+     */
+    private $quantidade;
+
     // Contrutor da classe, responsável por inicializar os dados.
-    function __construct(int $id, string $nome, string $descricao, float $preco) {
+    function __construct(int $id, string $nome, string $autor, string $descricao, float $preco, int $quantidade) {
         $this->id = $id;
         $this->nome = $nome;
+        $this->autor = $autor;
         $this->descricao = $descricao;
         $this->preco = $preco;
+        $this->quantidade = $quantidade;
     }
 
     // Método get genérico para todos os campos
@@ -44,22 +58,16 @@ class Produto {
         return $this->$campo = $valor;
     }
 
-    /**
-     *  Função que auxilia na verificação da identidade fornecida.
-     *  Para isso, os dados providos são comparados com a instância atual.
-     */
-    public function igual(int $id, string $nome): bool {
-        return $this->id === $id && $this->nome === $nome;
-    }
-
     // Função que salva os dados do produto no banco de dados
     public function salvar(): void {
         $con = Database::getConnection();
 
-        $stm = $con->prepare('INSERT INTO Produtos (nome, descricao, preco) VALUES (:nome, :descricao, :preco)');
+        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, descricao, preco, quantidade) VALUES (:nome, :autor, :descricao, :preco, :quantidade)');
         $stm->bindValue(':nome', $this->nome);
+        $stm->bindValue(':autor', $this->autor);
         $stm->bindValue(':descricao', $this->descricao);
         $stm->bindValue(':preco', $this->preco);
+        $stm->bindValue(':quantidade', $this->quantidade);
         $stm->execute();
     }
 
@@ -68,15 +76,14 @@ class Produto {
      */ 
     static public function buscarProduto($nome): Produto {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT id, nome, descricao, preco FROM Produtos WHERE nome = :nome');
+        $stm = $con->prepare('SELECT id, nome, autor, descricao, preco, quantidade FROM Produtos WHERE nome = :nome');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();
         $resultado = $stm->fetch();
 
         if ($resultado) {
-            $produto = new Produto($resultado['id'], $resultado['nome'], $resultado['descricao'], $resultado['preco']);
-            /*$produto->id = $resultado['id'];*/
+            $produto = new Produto($resultado['id'], $resultado['nome'], $resultado ['autor'], $resultado['descricao'], $resultado['preco'], $resultado['quantidade']);
             return $produto;
         }
         else {
@@ -90,14 +97,13 @@ class Produto {
      */
     static public function buscarTodos(): array {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT id, nome, descricao, preco FROM Produtos');
+        $stm = $con->prepare('SELECT id, nome, autor, descricao, preco, quantidade FROM Produtos');
         $stm->execute();
 
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $produto = new Produto($resultado['id'], $resultado['nome'], $resultado['descricao'], $resultado['preco']);
-            /*$produto->id = $resultado['id'];*/
+            $produto = new Produto($resultado['id'], $resultado['autor'], $resultado['nome'], $resultado['descricao'], $resultado['preco'], $resultado['quantidade']);
             array_push($resultados, $produto);
         }
         return $resultados;

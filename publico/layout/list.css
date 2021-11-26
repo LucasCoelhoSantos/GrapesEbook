@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body {
+  background-color: #694fb4;
+}
+
+body > div {
+  display: flex;
+  justify-content: center;
+}
+
+body > .back {
+  justify-content: left;
+  padding: 15px 0 0 15px;
+}
+
+body > .back > a,
+body > .back > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+  border: 0;
+  border-radius: 5px;
+  width: 100px;
+}
+
+body > .back > a:hover {
+  color: #694fb4;
+  background-color: #ffffff;
+}
+
+body > div > table {
+  background-color: #ffffff;
+  table-layout: auto;
+  border-radius: 5px;
+}
+
+body > div > table > thead > tr > th {
+  padding: 0 10px 0 10px;
+}
+
+body > div > table > tbody > tr > td {
+  text-align: center;
+}

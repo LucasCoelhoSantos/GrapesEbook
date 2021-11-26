@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-body {
-  background-color: #372584;
-}
-
 main > .listar {
   display: flex;
   justify-content: end;

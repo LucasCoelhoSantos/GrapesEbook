@@ -3,22 +3,14 @@
 main > section {
   display: flex;
   justify-content: center;
-
   align-items: center;
   text-align: center;
-  justify-items: center;
-  align-content: center;
 }
 
 main > section > .presentation {
   max-width: 980px;
-  padding: 25px;
-}
-
-main > section > .presentation > .slogan {
-  padding: 25px;
-  text-align: center;
   font-size: 1.2rem;
+  padding: 25px;
 }
 
 main > section > .presentation > .slogan > h2 {
@@ -38,13 +30,11 @@ main > section > .presentation > .illustration > img {
 main > .search-bar {
   padding: 5% 25% 5% 25%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 980px;
   /*background-color: #694fb4;*/
 }
 
 main > .search-bar > input {
-  width: 980px;
   background-color: #ffffff;
   height: 32px;
   border: 1px solid #000000;
