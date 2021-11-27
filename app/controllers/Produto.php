@@ -21,10 +21,10 @@ class ProdutoController extends Controller {
         try {
             $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['descricao'], $_POST['preco'], $_POST['quantidade']);
             $product->salvar();
-            header('Location: ' . BASEPATH . 'register?nome=' . $_POST['nome'] . '&mensagem=Produto cadastrado com sucesso!');
+            header('Location: ' . BASEPATH . 'user/info?nome=' . $_POST['nome'] . '&mensagem=Produto cadastrado com sucesso!');
         }
         catch (\Throwable $th) {
-            header('Location: ' . BASEPATH . 'register?nome=' . $_POST['nome'] . '&mensagem=Nome do produto já cadastrado!');
+            header('Location: ' . BASEPATH . 'product/register?nome=' . $_POST['nome'] . '&mensagem=Nome do produto já cadastrado!');
         }
     }
 

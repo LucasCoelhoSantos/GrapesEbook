@@ -39,8 +39,7 @@ class Produto {
     private $quantidade;
 
     // Contrutor da classe, responsável por inicializar os dados.
-    function __construct(int $id, string $nome, string $autor, string $descricao, float $preco, int $quantidade) {
-        $this->id = $id;
+    function __construct(string $nome, string $autor, string $descricao, float $preco, int $quantidade) {
         $this->nome = $nome;
         $this->autor = $autor;
         $this->descricao = $descricao;
@@ -83,8 +82,8 @@ class Produto {
         $resultado = $stm->fetch();
 
         if ($resultado) {
-            $produto = new Produto($resultado['id'], $resultado['nome'], $resultado ['autor'], $resultado['descricao'], $resultado['preco'], $resultado['quantidade']);
-            return $produto;
+            $produtc = new Produto($resultado['nome'], $resultado ['autor'], $resultado['descricao'], $resultado['preco'], $resultado['quantidade']);
+            return $produtc;
         }
         else {
             return NULL;
@@ -103,8 +102,8 @@ class Produto {
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $produto = new Produto($resultado['id'], $resultado['autor'], $resultado['nome'], $resultado['descricao'], $resultado['preco'], $resultado['quantidade']);
-            array_push($resultados, $produto);
+            $product = new Produto($resultado['nome'], $resultado['autor'], $resultado['descricao'], $resultado['preco'], $resultado['quantidade']);
+            array_push($resultados, $product);
         }
         return $resultados;
     }

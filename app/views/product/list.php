@@ -43,7 +43,7 @@
                             <td><?= $product-> quantidade?></td>
                             <td>
                                 <form action="<?= BASEPATH ?>product/remove" method="POST">
-                                    <input type="hiden" value="<?= $product->id ?>">
+                                    <input type="hidden" name="nome" value="<?= $product->nome ?>">
                                     <button type="submit"><ion-icon name="close-outline"></ion-icon></button>
                                 </form>
                             </td>

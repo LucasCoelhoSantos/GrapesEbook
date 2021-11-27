@@ -34,7 +34,7 @@
 
                 <div class="buttons">
                     <button type="submit">Cadastrar</button>    
-                    <a href="<?= BASEPATH ?>login">Possui cadastro? Entre.</a>
+                    <a href="<?= BASEPATH ?>login">Possui cadastro? Entre!</a>
                 </div>
             </form>
         </div>

@@ -88,9 +88,9 @@ class Usuario {
         $resultado = $stm->fetch();
 
         if ($resultado) {
-            $usuario = new Usuario($resultado['email'], $resultado['senha'], $resultado['nome']);
-            $usuario->senha = $resultado['senha'];
-            return $usuario;
+            $user = new Usuario($resultado['email'], $resultado['senha'], $resultado['nome']);
+            $user->senha = $resultado['senha'];
+            return $user;
         }
         else {
             return NULL;
@@ -109,9 +109,9 @@ class Usuario {
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $usuario = new Usuario($resultado['email'], $resultado['senha'], $resultado['nome']);
-            $usuario->senha = $resultado['senha'];
-            array_push($resultados, $usuario);
+            $user = new Usuario($resultado['email'], $resultado['senha'], $resultado['nome']);
+            $user->senha = $resultado['senha'];
+            array_push($resultados, $user);
         }
         return $resultados;
     }

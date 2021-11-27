@@ -28,7 +28,7 @@
 
                 <div class="buttons">
                     <button type="submit">Entrar</button>
-                    <a href="<?= BASEPATH ?>register">Desejo me cadastrar.</a>
+                    <a href="<?= BASEPATH ?>register">Desejo me cadastrar!</a>
                 </div>
             </form>
         </div>

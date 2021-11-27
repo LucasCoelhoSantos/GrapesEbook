@@ -35,12 +35,12 @@
 
                 <div>
                     <label>Preço</label>
-                    <input type="number" id="preco" name="preco" min="1" max="1000" required>
+                    <input type="number" id="preco" name="preco" placeholder="No máximo 1000" min="1" max="1000" required>
                 </div>
 
                 <div>
                     <label>Quantidade</label>
-                    <input type="number" id="quantidade" name="quantidade" min="1" max="1000" required>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="No máximo 1000" min="1" max="1000" required>
                 </div>
 
                 <div>
