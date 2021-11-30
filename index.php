@@ -43,19 +43,21 @@ Route::add('/register', fn () => $controller2->cadastrarUsuarioIndex(), ['get'])
 Route::add('/user/info', fn () => $controller2->info(), ['get']);
 Route::add('/user/list', fn () => $controller2->listar(), ['get']);
 
-// ROUTE GET PRODUCT
-Route::add('/product/register', fn() => $controller3->cadastrarProdutoIndex(), ['get']);
-Route::add('/product/list', fn() => $controller3->listarProdutos(), ['get']);
-
 // ROUTE POST LOGIN
 Route::add('/login', fn ()  => $controller2->login(), ['post']);
 Route::add('/register', fn ()  => $controller2->cadastrarUsuario(), ['post']);
 Route::add('/logout', fn () => $controller2->sair(), ['post']);
 Route::add('/user/remove', fn ()  => $controller2->deletar(), ['post']);
 
+// ROUTE GET PRODUCT
+Route::add('/product/register', fn() => $controller3->cadastrarProdutoIndex(), ['get']);
+Route::add('/product/list', fn() => $controller3->listarProdutos(), ['get']);
+Route::add('/product/search', fn () => $controller3->searchProduct(), ['get']);
+
 // ROUTE POST PRODUCT
 Route::add('/product/register', fn() => $controller3->cadastrarProduto(), ['post']);
 Route::add('/product/remove', fn ()  => $controller3->deletarProduto(), ['post']);
+//Route::add('/product/search', fn () => $controller3->searchProduct(), ['post']);
 
 // Rota auxiliar para redirecionar o usuário.
 Route::add('/', function () {

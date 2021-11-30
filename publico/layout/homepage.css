@@ -34,7 +34,7 @@ main > .search-bar {
   /*background-color: #694fb4;*/
 }
 
-main > .search-bar > input {
+main > .search-bar > form > input {
   background-color: #ffffff;
   height: 32px;
   border: 1px solid #000000;
@@ -43,7 +43,7 @@ main > .search-bar > input {
   padding-left: 4px;
 }
 
-main > .search-bar > button {
+main > .search-bar > form > button {
   background-color: #ffffff;
   height: 35px;
   min-width: 35px;

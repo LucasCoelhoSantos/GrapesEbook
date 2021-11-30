@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="illustration">
-                    <img src="images/illustration-slogan.svg" alt="imagem ilustrativa">
+                    <img src="images/illustration-slogan.svg" alt="imagem slogan">
                 </div>
             </div>
         </section>
@@ -31,8 +31,10 @@
             <!--
                 TO DO - Buscar ebooks disponíveis com base no nome ou autor.
             -->
-            <input type="search" placeholder="Procure pelo nome ou autor de um e-book!"/>
-            <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+            <form action="<?= BASEPATH ?>product/search" method="get">
+                <input type="search" id="nome" name="nome" placeholder="Procure pelo nome ou autor de um e-book!"/>
+                <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+            </form>
         </div>
 
         <!-- 
@@ -47,21 +49,21 @@
                 <div class="products">
                     <button><ion-icon name="arrow-back"></ion-icon></button>
                     <div class="product">
-                        <img src="images/ebook-o-reino-da-rosa-negra.png" alt="O reino da rosa negra">
+                        <img src="images/ebooks/o-reino-da-rosa-negra.png" alt="O reino da rosa negra">
                         <div class="product-information">
                             <h3>O reino da rosa negra</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
                     <div class="product">
-                        <img src="images/ebook-uma-dobra-no-tempo.png" alt="Uma dobra no tempo">
+                        <img src="images/ebooks/uma-dobra-no-tempo.png" alt="Uma dobra no tempo">
                         <div class="product-information">
                             <h3>Uma dobra no tempo</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
                     <div class="product">
-                        <img src="images/ebook-os-miseraveis" alt="Os Miseráveis">
+                        <img src="images/ebooks/os-miseraveis" alt="Os Miseráveis">
                         <div class="product-information">
                             <h3>Os Miseráveis</h3>
                             <span>Preço: </span>
@@ -76,21 +78,21 @@
                 <div class="products">
                     <button><ion-icon name="arrow-back"></ion-icon></button>
                     <div class="product">
-                        <img src="images/ebook-viagens-de-guliver" alt="Viagens de Guliver">
+                        <img src="images/ebooks/viagens-de-guliver" alt="Viagens de Guliver">
                         <div class="product-information">
                             <h3>Viagens de Guliver</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
                     <div class="product">
-                        <img src="images/ebook-dom-casmurro" alt="Dom Casmurro">
+                        <img src="images/ebooks/dom-casmurro" alt="Dom Casmurro">
                         <div class="product-information">
                             <h3>Dom Casmurro</h3>
                             <span>Preço: </span>
                         </div>
                     </div>
                     <div class="product">
-                        <img src="images/ebook-o-pai" alt="O pai">
+                        <img src="images/ebooks/o-pai" alt="O pai">
                         <div class="product-information">
                             <h3>O pai</h3>
                             <span>Preço: </span>

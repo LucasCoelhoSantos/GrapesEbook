@@ -39,11 +39,6 @@
                 </div>
 
                 <div>
-                    <label>Quantidade</label>
-                    <input type="number" id="quantidade" name="quantidade" placeholder="No máximo 1000" min="1" max="1000" required>
-                </div>
-
-                <div>
                     <button type="submit">Cadastrar</button>
                 </div>
             </form>

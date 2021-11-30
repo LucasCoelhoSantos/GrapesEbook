@@ -23,7 +23,6 @@
                     <th>Autor</th>
                     <th>Descrição</th>
                     <th>Preço</th>
-                    <th>Quantidade</th>
                 </tr>
             </thead>
 
@@ -40,7 +39,6 @@
                             <td><?= $product-> autor?></td>
                             <td><?= $product-> descricao?></td>
                             <td><?= $product-> preco?></td>
-                            <td><?= $product-> quantidade?></td>
                             <td>
                                 <form action="<?= BASEPATH ?>product/remove" method="POST">
                                     <input type="hidden" name="nome" value="<?= $product->nome ?>">

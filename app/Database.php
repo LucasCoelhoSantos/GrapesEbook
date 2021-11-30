@@ -18,10 +18,12 @@ class Database {
 
     static public function createSchema(): void {
         $con = self::getConnection();
+
         $con->exec('
             CREATE TABLE IF NOT EXISTS Usuarios (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome  TEXT,
-                email TEXT PRIMARY KEY,
+                email TEXT,
                 senha TEXT
             )
         ');
@@ -29,11 +31,19 @@ class Database {
         $con->exec('
             CREATE TABLE IF NOT EXISTS Produtos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome  TEXT,
+                nome  TEXT UNIQUE,
                 autor TEXT,
                 descricao TEXT,
-                preco FLOAT,
-                quantidade INTEGER
+                preco FLOAT
+            )
+        ');
+
+        $con->exec('
+            CREATE TABLE IF NOT EXISTS Carrinho (
+                id_usuario,
+                id_produto,
+                FOREIGN KEY (id_usuario) REFERENCES Usuario(id),
+                FOREIGN KEY (id_produto) REFERENCES Produto(id)
             )
         ');
     }

@@ -8,7 +8,13 @@ use PDOException;
 // Classe responsável pela gestão das atividades relacionadas ao produto. Principalmente ao cadastro e exclusão.
 class ProdutoController extends Controller {
 
-    // Função que renderiza a página (visão) de cadastro produto.
+    // Função que renderiza a página (visão) de pesquisa de um produto.
+    public function searchProduct(): void {
+        $products = Produto::buscarProdutoCom($_GET["nome"]);
+        $this->view('product/search', $products);
+    }
+
+    // Função que renderiza a página (visão) de cadastro de um produto.
     public function cadastrarProdutoIndex(): void {
         $this->view('product/register');
     }
@@ -19,7 +25,7 @@ class ProdutoController extends Controller {
      */
     public function cadastrarProduto(): void {
         try {
-            $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['descricao'], $_POST['preco'], $_POST['quantidade']);
+            $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['descricao'], $_POST['preco']);
             $product->salvar();
             header('Location: ' . BASEPATH . 'user/info?nome=' . $_POST['nome'] . '&mensagem=Produto cadastrado com sucesso!');
         }
@@ -28,7 +34,7 @@ class ProdutoController extends Controller {
         }
     }
 
-    // Função que lista os produtos da plataforma
+    // Função que lista todos os produtos da plataforma
     public function listarProdutos(): void {
         $products = Produto::buscarTodos();
         $this->view('product/list', $products);
