@@ -30,14 +30,20 @@ main > section > .presentation > .illustration > img {
 main > .search-bar {
   padding: 5% 25% 5% 25%;
   display: flex;
-  width: 980px;
+  justify-content: center;
   /*background-color: #694fb4;*/
+}
+
+main > .search-bar > form {
+  display: flex;
+  justify-content: center;
+  height: 32px;
 }
 
 main > .search-bar > form > input {
   background-color: #ffffff;
-  height: 32px;
   border: 1px solid #000000;
+  min-width: 380px;
   flex-grow: 1;
   font-size: 1rem;
   padding-left: 4px;
@@ -45,7 +51,6 @@ main > .search-bar > form > input {
 
 main > .search-bar > form > button {
   background-color: #ffffff;
-  height: 35px;
   min-width: 35px;
   border: 1px solid #000000;
   border-left: 0;
