@@ -42,5 +42,6 @@ body > div > table > thead > tr > th {
 }
 
 body > div > table > tbody > tr > td {
+  font-size: 1.2rem;
   text-align: center;
 }

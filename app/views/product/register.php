@@ -15,6 +15,10 @@
         <?php include('app/views/layout/header.php')?>
     </header>
 
+    <div class="back">
+        <a href="<?= BASEPATH ?>user/info"><ion-icon name="arrow-back"></ion-icon><span>Voltar</span></a>
+    </div>
+
     <main>
         <div class="register">
             <form method="POST">
@@ -26,6 +30,44 @@
                 <div>
                     <label>Autor</label>
                     <input type="text" id="autor" name="autor" placeholder="Autor da obra" required>
+                </div>
+
+                <div class="genero">
+                    <label>Gênero do livro</label>
+                    <div>
+                        <input type="radio" name="genero" value="Ação" required>
+                        <label for="Ação">Ação</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" value="Clássico" required>
+                        <label for="Clássico">Clássico</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" value="Científico" required>
+                        <label for="Científico">Científico</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" value="Fantasia" required>
+                        <label for="Fantasia">Fantasia</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" value="Horror" required>
+                        <label for="Horror">Horror</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" value="Infantil" required>
+                        <label for="Infantil">Infantil</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="genero" value="Romance" required>
+                        <label for="Romance">Romance</label>
+                    </div>
                 </div>
 
                 <div>

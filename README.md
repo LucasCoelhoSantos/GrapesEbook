@@ -24,7 +24,7 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 
 ## Plataformas para inspiração
 
-- [Amazon](https://www.amazon.com)
+- [Amazon](https://www.amazon.com.br)
 - [Americanas](https://www.americanas.com.br)
 - [Magazine Luiza](https://www.magazineluiza.com.br)
 - [Mercado Livre](https://www.mercadolivre.com.br)
@@ -32,10 +32,10 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 
 ## Tecnologias Utilizadas
 
-- [x] PHP
+- [x] PHP 7.4.9
 - [x] CSS
 - [x] JS
-- [x] WAMPSERVER
+- [x] WAMPSERVER 3.2.5
 
 ## Participantes
 

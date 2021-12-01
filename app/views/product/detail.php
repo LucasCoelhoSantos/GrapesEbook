@@ -21,7 +21,7 @@
             <div><span>Ebook: <?= $data->nome ?></span></div>
             <div><span>Autor: <?= $data->autor ?></span></div>
             <div><span><img src="#" alt="imagem: <?= $data-> nome ?>"></span></div>
-            <div><span>Categoria: <.?= $data->categoria ?></span></div>
+            <div><span>Gênero: <?= $data->genero ?></span></div>
             <div><span>Descricao: <?= $data->descricao ?></span></div>
             <div><span>Valor: R$<?= $data->preco ?>,00</span></div>
         </div>

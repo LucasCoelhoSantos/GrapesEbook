@@ -18,20 +18,51 @@
 
     <div class="filtro">
         <section>
-            <span>Filtros de busca</span>
-            <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-            </ul>
+            <span>Filtros:</span>
+            <form action="<?= BASEPATH ?>product/search" method="GET">
+                <div>
+                    <input type="radio" name="genero" value="Ação" required>
+                    <label for="Ação">Ação</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" value="Clássico" required>
+                    <label for="Clássico">Clássico</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" value="Científico" required>
+                    <label for="Científico">Científico</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" value="Fantasia" required>
+                    <label for="Fantasia">Fantasia</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" value="Horror" required>
+                    <label for="Horror">Horror</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" value="Infantil" required>
+                    <label for="Infantil">Infantil</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="genero" value="Romance" required>
+                    <label for="Romance">Romance</label>
+                </div>
+                <button type="submit" class="button">Filtrar</button>
+            </form>
         </section>
 
-        <main>        
+        <main>
             <div>
                 <?php if (is_null($data) || count($data) === 0) { ?>
                     <div>
-                        <span>Infelizmente ainda não temos nenhum Ebook com esse nome :(</span>
+                        <span>Infelizmente ainda não temos nenhum Ebook desse tipo :(</span>
                     </div>
                 <?php } else { ?>
                     <?php foreach ($data as $product) { ?>
@@ -43,6 +74,7 @@
                                 <div><h2><?= $product->nome?></h2></div>
                                 <div><span>Autor: <?= $product->autor?></span></div>
                                 <div><span><img src="#" alt="imagem: <?= $product->nome ?>"></span></div>
+                                <div><span>Gênero: <?= $product->genero?></span></div>
                                 <div><span>Preço: R$<?= $product->preco?>,00</span></div>
 
                                 <input type="hidden" name="nome" value="<?= $product->nome ?>">

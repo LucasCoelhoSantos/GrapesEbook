@@ -24,6 +24,11 @@ class Produto {
     private $autor;
 
     /**
+     * @var string Gênero do produto
+     */
+    private $genero;
+
+    /**
      * @var string Descrição do produto
      */
     private $descricao;
@@ -34,9 +39,10 @@ class Produto {
     private $preco;
 
     // Contrutor da classe, responsável por inicializar os dados.
-    function __construct(string $nome, string $autor, string $descricao, float $preco) {
+    function __construct(string $nome, string $autor, string $genero, string $descricao, float $preco) {
         $this->nome = $nome;
         $this->autor = $autor;
+        $this->genero = $genero;
         $this->descricao = $descricao;
         $this->preco = $preco;
     }
@@ -55,10 +61,10 @@ class Produto {
     public function salvar(): void {
         $con = Database::getConnection();
 
-        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, imagem, descricao, preco) VALUES (:nome, :autor, :imagem, :descricao, :preco)');
+        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, genero, descricao, preco) VALUES (:nome, :autor, :genero, :descricao, :preco)');
         $stm->bindValue(':nome', $this->nome);
         $stm->bindValue(':autor', $this->autor);
-        $stm->bindValue(':imagem', $this->imagem);
+        $stm->bindValue(':genero', $this->genero);
         $stm->bindValue(':descricao', $this->descricao);
         $stm->bindValue(':preco', $this->preco);
         $stm->execute();
@@ -69,14 +75,14 @@ class Produto {
      */ 
     static public function buscarProduto($nome): Produto {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT nome, autor, descricao, preco FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
+        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();
         $resultado = $stm->fetch();
 
         if ($resultado) {
-            $produtc = new Produto($resultado['nome'], $resultado ['autor'], $resultado['descricao'], $resultado['preco']);
+            $produtc = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
             return $produtc;
         }
         else {
@@ -88,17 +94,36 @@ class Produto {
      * Função que busca por produtos a partir do nome fornecido e caso não exista, retorna NULL.
      * @return Produto[]
      */ 
-    static public function buscarProdutoCom($nome): array {
+    static public function buscarProdutoNome($nome): array {
         $con = Database::getConnection();
         $nome = "%".trim($_GET['nome'])."%";
-        $stm = $con->prepare('SELECT nome, autor, descricao, preco FROM Produtos WHERE nome LIKE :nome ORDER BY nome ASC');
+        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco FROM Produtos WHERE nome LIKE :nome ORDER BY nome ASC');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['descricao'], $resultado['preco']);
+            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
+            array_push($resultados, $product);
+        }
+        return $resultados;
+    }
+
+    /**
+     * Função que busca por produtos a partir do nome fornecido contendo um filtro e caso não exista, retorna NULL.
+     * @return Produto[]
+     */ 
+    static public function buscarProdutoGenero($genero): array {
+        $con = Database::getConnection();
+        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco FROM Produtos WHERE genero = :genero');
+        $stm->bindParam(':genero', $genero);
+
+        $stm->execute();
+        $resultados = [];
+
+        while ($resultado = $stm->fetch()) {
+            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
             array_push($resultados, $product);
         }
         return $resultados;
@@ -108,15 +133,15 @@ class Produto {
      * Função que retorna todos os produtos cadastrados.
      * @return Produto[]
      */
-    static public function buscarTodos(): array {
+    static public function buscarTodosProdutos(): array {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT id, nome, autor, descricao, preco FROM Produtos ORDER BY nome ASC');
+        $stm = $con->prepare('SELECT id, nome, autor, genero, descricao, preco FROM Produtos ORDER BY nome ASC');
         $stm->execute();
 
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $product = new Produto($resultado['nome'], $resultado['autor'], $resultado['descricao'], $resultado['preco']);
+            $product = new Produto($resultado['nome'], $resultado['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
             array_push($resultados, $product);
         }
         return $resultados;

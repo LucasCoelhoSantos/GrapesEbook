@@ -18,11 +18,12 @@
         <table>
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Nome</th>
                     <th>Autor</th>
+                    <th>Gênero</th>
                     <th>Descrição</th>
                     <th>Preço</th>
+                    <th>Deletar</th>
                 </tr>
             </thead>
 
@@ -34,9 +35,9 @@
                 <?php } else { ?>
                     <?php foreach ($data as $product) { ?>
                         <tr>
-                            <td><?= $product-> id?></td>
                             <td><?= $product-> nome?></td>
                             <td><?= $product-> autor?></td>
+                            <td><?= $product-> genero?></td>
                             <td><?= $product-> descricao?></td>
                             <td><?= $product-> preco?></td>
                             <td>

@@ -59,6 +59,9 @@ Route::add('/product/detail', fn() => $controller3->detailProduct(), ['get']);
 Route::add('/product/register', fn() => $controller3->cadastrarProduto(), ['post']);
 Route::add('/product/remove', fn ()  => $controller3->deletarProduto(), ['post']);
 
+// ROUTE GET CART
+Route::add('/cart', fn() => $controller4->cartIndex(), ['get']);
+
 // Rota auxiliar para redirecionar o usuário.
 Route::add('/', function () {
     header('Location: ' . BASEPATH . 'homepage');

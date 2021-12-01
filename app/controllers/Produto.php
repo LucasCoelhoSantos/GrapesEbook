@@ -19,7 +19,7 @@ class ProdutoController extends Controller {
      */
     public function cadastrarProduto(): void {
         try {
-            $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['descricao'], $_POST['preco']);
+            $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['genero'], $_POST['descricao'], $_POST['preco']);
             $product->salvar();
             header('Location: ' . BASEPATH . 'user/info?nome=' . $_POST['nome'] . '&mensagem=Produto cadastrado com sucesso!');
         }
@@ -30,14 +30,20 @@ class ProdutoController extends Controller {
 
     // Função que lista todos os produtos da plataforma
     public function listarProdutos(): void {
-        $products = Produto::buscarTodos();
+        $products = Produto::buscarTodosProdutos();
         $this->view('product/list', $products);
     }
 
-    // Função que renderiza a página (visão) de pesquisa de um produto.
+    // Função que renderiza a página (visão) de pesquisa de um produto com base no nome ou gênero.
     public function searchProduct(): void {
-        $products = Produto::buscarProdutoCom($_GET["nome"]);
-        $this->view('product/search', $products);
+        if (isset($_GET["nome"])) {
+            $products = Produto::buscarProdutoNome($_GET["nome"]);
+            $this->view('product/search', $products);
+        }
+        else if (isset($_GET["genero"])) {
+            $products = Produto::buscarProdutoGenero($_GET["genero"]);
+            $this->view('product/search', $products);
+        }              
     }
 
     // Função responsável por renderizar as informações do produto.
