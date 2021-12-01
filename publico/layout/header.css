@@ -14,8 +14,8 @@ header > .container {
 }
 
 header > .container > .left-logo {
-  align-items: center;
   display: flex;
+  align-items: center;
 }
 
 header > .container > .left-logo > a > ion-icon {

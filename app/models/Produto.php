@@ -55,9 +55,10 @@ class Produto {
     public function salvar(): void {
         $con = Database::getConnection();
 
-        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, descricao, preco) VALUES (:nome, :autor, :descricao, :preco)');
+        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, imagem, descricao, preco) VALUES (:nome, :autor, :imagem, :descricao, :preco)');
         $stm->bindValue(':nome', $this->nome);
         $stm->bindValue(':autor', $this->autor);
+        $stm->bindValue(':imagem', $this->imagem);
         $stm->bindValue(':descricao', $this->descricao);
         $stm->bindValue(':preco', $this->preco);
         $stm->execute();
@@ -68,7 +69,7 @@ class Produto {
      */ 
     static public function buscarProduto($nome): Produto {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT id, nome, autor, descricao, preco FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
+        $stm = $con->prepare('SELECT nome, autor, descricao, preco FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();
@@ -89,7 +90,8 @@ class Produto {
      */ 
     static public function buscarProdutoCom($nome): array {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT nome, autor, descricao, preco FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
+        $nome = "%".trim($_GET['nome'])."%";
+        $stm = $con->prepare('SELECT nome, autor, descricao, preco FROM Produtos WHERE nome LIKE :nome ORDER BY nome ASC');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();

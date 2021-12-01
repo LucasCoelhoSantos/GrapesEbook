@@ -16,7 +16,7 @@
         <?php include('app/views/layout/header.php')?>
     </header>
 
-    <div>
+    <div class="filtro">
         <section>
             <span>Filtros de busca</span>
             <ul>
@@ -39,10 +39,15 @@
                             <!--
                                 TO DO - Implementar foto do produto
                             -->
-                            <h2><?= $product-> nome?></h2>
-                            <span>Autor: <?= $product-> autor?></span>
-                            <span>Descrição: <?= $product-> descricao?></span>
-                            <span>Preço: R$<?= $product-> preco?>,00</span>
+                            <form action="<?= BASEPATH ?>product/detail" method="GET">
+                                <div><h2><?= $product->nome?></h2></div>
+                                <div><span>Autor: <?= $product->autor?></span></div>
+                                <div><span><img src="#" alt="imagem: <?= $product->nome ?>"></span></div>
+                                <div><span>Preço: R$<?= $product->preco?>,00</span></div>
+
+                                <input type="hidden" name="nome" value="<?= $product->nome ?>">
+                                <button type="submit" class="button">Ver detalhes do produto</button>
+                            </form>
                         </div>
                     <?php } ?>
                 <?php } ?>

@@ -27,12 +27,13 @@ class Database {
                 senha TEXT
             )
         ');
-
+//imagem BLOB,
         $con->exec('
             CREATE TABLE IF NOT EXISTS Produtos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome  TEXT UNIQUE,
                 autor TEXT,
+                
                 descricao TEXT,
                 preco FLOAT
             )

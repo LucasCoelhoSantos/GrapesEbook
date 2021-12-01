@@ -53,11 +53,11 @@ Route::add('/user/remove', fn ()  => $controller2->deletar(), ['post']);
 Route::add('/product/register', fn() => $controller3->cadastrarProdutoIndex(), ['get']);
 Route::add('/product/list', fn() => $controller3->listarProdutos(), ['get']);
 Route::add('/product/search', fn () => $controller3->searchProduct(), ['get']);
+Route::add('/product/detail', fn() => $controller3->detailProduct(), ['get']);
 
 // ROUTE POST PRODUCT
 Route::add('/product/register', fn() => $controller3->cadastrarProduto(), ['post']);
 Route::add('/product/remove', fn ()  => $controller3->deletarProduto(), ['post']);
-//Route::add('/product/search', fn () => $controller3->searchProduct(), ['post']);
 
 // Rota auxiliar para redirecionar o usuário.
 Route::add('/', function () {
