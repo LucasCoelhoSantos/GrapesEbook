@@ -9,8 +9,8 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 ## Histórias de Usuário
 
 - [ ] Navegar por uma lista de produtos
-- [ ] Buscar por produtos através do nome
-- [ ] Visualizar detalhes de um produto
+- [x] Buscar por produtos através do nome
+- [x] Visualizar detalhes de um produto
 - [ ] Navegar por categorias
 - [ ] Adicionar produtos à sacola de compras
 - [ ] Finalizar uma compra
