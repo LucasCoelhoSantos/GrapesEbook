@@ -18,12 +18,12 @@
 
     <main>
         <div class="details">
-            <div><span>Ebook: <?= $data->nome ?></span></div>
+            <div><h2>Ebook: <?= $data->nome ?></h2></div>
             <div><span>Autor: <?= $data->autor ?></span></div>
-            <div><span><img src="#" alt="imagem: <?= $data-> nome ?>"></span></div>
             <div><span>Gênero: <?= $data->genero ?></span></div>
-            <div><span>Descricao: <?= $data->descricao ?></span></div>
-            <div><span>Valor: R$<?= $data->preco ?>,00</span></div>
+            <div><span><img src="<?= $data->imagem?>" alt="imagem: <?= $data->nome ?>"></span></div>
+            <div><span>Descrição: <?= $data->descricao ?></span></div>
+            <div class="valor"><span>Valor: R$<?= $data->preco ?>,00</span></div>
         </div>
     </main>
 

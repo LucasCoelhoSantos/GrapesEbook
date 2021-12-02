@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="illustration">
-                    <img src="images/illustration-slogan.svg" alt="imagem slogan">
+                    <img src="images/illustration/slogan.svg" alt="imagem slogan">
                 </div>
             </div>
         </section>

@@ -54,7 +54,8 @@ main > div > .product-card > form > div > span {
   color: #694fb4;
 }
 
-main > div > .product-card > form > button {
+main > div > .product-card > form > button,
+.filtro > section > form > button {
   background-color: #694fb4;
   color: #ffffff;
   text-align: center;
@@ -63,6 +64,7 @@ main > div > .product-card > form > button {
   padding: 5px;
 }
 
-main > div > .product-card > form > button:hover {
+main > div > .product-card > form > button:hover,
+.filtro > section > form > button:hover {
   background-color: #9a85d4;
 }
