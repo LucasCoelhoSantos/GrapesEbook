@@ -70,10 +70,10 @@
                             <form action="<?= BASEPATH ?>product/detail" method="GET">
                                 <div><h2><?= $product->nome?></h2></div>
                                 <div><span>Autor: <?= $product->autor?></span></div>
-                                <div><span><img src="<?= $product->imagem?>" alt="imagem: <?= $product->nome ?>"></span></div>
                                 <div><span>Gênero: <?= $product->genero?></span></div>
+                                <div><span><img src="<?= $product->imagem?>" alt="imagem: <?= $product->nome ?>"></span></div>
                                 <div><span>Preço: R$<?= $product->preco?>,00</span></div>
-
+                                
                                 <input type="hidden" name="nome" value="<?= $product->nome ?>">
                                 <button type="submit" class="button">Ver detalhes do produto</button>
                             </form>

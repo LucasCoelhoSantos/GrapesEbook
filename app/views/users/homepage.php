@@ -38,7 +38,7 @@
         </div>
 
         <!-- 
-            TO DO - Aqui os ebooks em destaque, arrumar os livros disponíveis e relacionar com o banco de dados. No momento é apenas um visual do que será apresentado.
+            TO DO - Aqui vai os ebooks em destaque, arrumar os livros disponíveis e relacionar com o banco de dados. No momento é apenas um visual do que será apresentado.
 
             TO FIX - Container onde ficará os ebooks não está responsivo.
         -->
@@ -78,7 +78,7 @@
                 <div class="products">
                     <button><ion-icon name="arrow-back"></ion-icon></button>
                     <div class="product">
-                        <img src="images/ebooks/viagens-de-guliver" alt="Viagens de Guliver">
+                        <img src="images/ebooks/as-viagens-de-gulliver" alt="Viagens de Guliver">
                         <div class="product-information">
                             <h3>Viagens de Guliver</h3>
                             <span>Preço: </span>

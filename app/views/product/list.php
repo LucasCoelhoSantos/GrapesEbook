@@ -30,16 +30,16 @@
             <tbody>
                 <?php if (is_null($data) || count($data) === 0) { ?>
                     <tr>
-                        <td colspan="6">Nenhum produto cadastrado ainda :(</td>
+                        <td colspan="7">Nenhum produto cadastrado ainda :(</td>
                     </tr>
                 <?php } else { ?>
                     <?php foreach ($data as $product) { ?>
                         <tr>
-                            <td><?= $product-> nome?></td>
-                            <td><?= $product-> autor?></td>
-                            <td><?= $product-> genero?></td>
-                            <td><?= $product-> descricao?></td>
-                            <td><?= $product-> preco?></td>
+                            <td><?=$product->nome?></td>
+                            <td><?=$product->autor?></td>
+                            <td><?=$product->genero?></td>
+                            <td><?=$product->descricao?></td>
+                            <td><?=$product->preco?></td>
                             <td>
                                 <form action="<?= BASEPATH ?>product/remove" method="POST">
                                     <input type="hidden" name="nome" value="<?= $product->nome ?>">

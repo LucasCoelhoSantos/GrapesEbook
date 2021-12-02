@@ -42,6 +42,10 @@ main > div > .product-card > form > div {
   padding: 5px;
 }
 
+main > div > .product-card > form > div > span > img {
+  height: 200px;
+}
+
 main > div > .product-card > form > div > h2 {
   color: #694fb4;
 }

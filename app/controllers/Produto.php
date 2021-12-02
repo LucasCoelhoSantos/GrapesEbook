@@ -19,7 +19,7 @@ class ProdutoController extends Controller {
      */
     public function cadastrarProduto(): void {
         try {
-            $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['genero'], $_POST['descricao'], $_POST['preco']);
+            $product = new Produto($_POST['nome'], $_POST['autor'], $_POST['genero'], $_POST['imagem'], $_POST['descricao'], $_POST['preco']);
             $product->salvar();
             header('Location: ' . BASEPATH . 'user/info?nome=' . $_POST['nome'] . '&mensagem=Produto cadastrado com sucesso!');
         }

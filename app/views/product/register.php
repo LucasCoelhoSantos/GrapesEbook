@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/base/base.css">
-    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/layout/header.css">
-    <link rel="stylesheet" href="<?= BASEPATH ?>/publico/layout/login.css">
+    <link rel="stylesheet" href="<?=BASEPATH?>/publico/base/base.css">
+    <link rel="stylesheet" href="<?=BASEPATH?>/publico/layout/header.css">
+    <link rel="stylesheet" href="<?=BASEPATH?>/publico/layout/login.css">
     <title>Cadastrar Produto</title>
 </head>
 
@@ -16,7 +16,7 @@
     </header>
 
     <div class="back">
-        <a href="<?= BASEPATH ?>user/info"><ion-icon name="arrow-back"></ion-icon><span>Voltar</span></a>
+        <a href="<?=BASEPATH?>user/info"><ion-icon name="arrow-back"></ion-icon><span>Voltar</span></a>
     </div>
 
     <main>
@@ -71,8 +71,13 @@
                 </div>
 
                 <div>
+                    <label>Imagem do produto</label>
+                    <input type="text" name="imagem" placeholder="Cole o URL da imagem..." required>
+                </div>
+
+                <div>
                     <label>Descrição</label>
-                    <input type="text" id="descricao" name="descricao" placeholder="Breve descrição do produto..." required>
+                    <input type="text" name="descricao" placeholder="Breve descrição do produto..." required>
                 </div>
 
                 <div>
