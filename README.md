@@ -1,17 +1,24 @@
-# Progweb-GrapesEbook
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasCoelhoSantos/GrapesEbook?style=for-the-badge)
 
-Este projeto é o trabalho prático da disciplina de programação para web turma P02-2021-2
+![GitHub contributors](https://img.shields.io/github/contributors/LucasCoelhoSantos/GrapesEbook?style=for-the-badge)
 
-# Loja Online
+# Grapes Ebook
 
-Loja online é uma aplicação que permite clientes cadastrados selecionem e comprem produtos (a compra é ficticia).
+Grapes Ebook é uma aplicação de loja online, que permite clientes cadastrados selecionem e comprem produtos (a compra é ficticia).
+
+## Pré-requisitos
+
+Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
+
+- PHP versão 7.4.9
+- WAMPSERVER versão 3.2.5
 
 ## Histórias de Usuário
 
 - [ ] Navegar por uma lista de produtos
 - [x] Buscar por produtos através do nome
 - [x] Visualizar detalhes de um produto
-- [ ] Navegar por categorias
+- [x] Navegar por categorias
 - [ ] Adicionar produtos à sacola de compras
 - [ ] Finalizar uma compra
 
@@ -21,6 +28,18 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 - [ ] Receber recomendações de produtos
 - [ ] Fazer buscas avançadas
 - [ ] Se cadastrar para receber novidades
+
+## Usando Nome_da_Aplicação
+
+Para usar GrapesEbook, siga os seguintes passos:
+
+- Abra o navegador e digite o seguinte endereço: `http://localhost/....`
+- Ao abrir a aplicação você poderá:
+  - Navegar pelo conteúdo público, ou
+  - Entrar com usuário e senha para ....
+- _Continua ..._
+
+_Descreva as principais atividades, e/ou fluxos, que são possíveis de serem realizadas na aplicação._
 
 ## Plataformas para inspiração
 
@@ -32,14 +51,14 @@ Loja online é uma aplicação que permite clientes cadastrados selecionem e com
 
 ## Tecnologias Utilizadas
 
-- [x] PHP 7.4.9
-- [x] CSS
-- [x] JS
-- [x] WAMPSERVER 3.2.5
+- PHP (7.4.9)
+- CSS
+- JS
+- WAMPSERVER (3.2.5)
 
-## Participantes
+## Contribuidores
 
-### Alunos do grupo 007
+### Grupo 007
 
 - [Christian Nilles](https://github.com/ChristianNilles)
 - [Guilherme Augusto Soares]() Aluno participou apenas da prototipação das telas
