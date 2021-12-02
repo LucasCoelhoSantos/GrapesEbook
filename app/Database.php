@@ -23,14 +23,13 @@ class Database {
             CREATE TABLE IF NOT EXISTS Usuarios (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nome  TEXT,
-                email TEXT,
+                email TEXT UNIQUE,
                 senha TEXT
             )
         ");
         
-        /*
         $con->exec("
-            INSERT INTO Usuarios (nome, email, senha) VALUES
+            INSERT OR REPLACE INTO Usuarios (nome, email, senha) VALUES
             ('Carlos', 'carlos@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
             ('Lucas', 'lucas@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
             ('Pedro', 'pedro@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
@@ -42,7 +41,6 @@ class Database {
             ('Isabela', 'isabela@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92'),
             ('Juriscreuda', 'juriscreuda@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92')
         ");
-        */
         
         //imagem BLOB,
         $con->exec("
@@ -51,17 +49,14 @@ class Database {
                 nome  TEXT UNIQUE,
                 autor TEXT,
                 
-                genero INTEGER,
+                genero TEXT,
                 descricao TEXT,
-                preco FLOAT,
-
-                FOREIGN KEY (genero) REFERENCES Genero(id)
+                preco FLOAT
             )
         ");
         
-        /*
         $con->exec("
-            INSERT INTO Produtos (nome, autor, genero, descricao, preco) VALUES
+            INSERT OR REPLACE INTO Produtos (nome, autor, genero, descricao, preco) VALUES
             ('Livro do desassossego', 'João Pessoa', 'Clássico', 'Os fragmentos que compõem esta complexa obra representam a inquietude, os sentimentos, as dúvidas e o amplo conhecimento de mundo daquele que segurava a caneta para escrever tão profundas palavras e ao fim assinar sob o heterônimo de Bernardo Soares. Escrita em forma de diário, Livro do Desassossego é a obra de Fernando Pessoa que mais se assemelha a um romance, revelando os mais íntimos pensamentos e impressões do autor.', 10),
 
             ('Drácula', 'Bram Stoker', 'Clássico', 'Drácula é um clássico da literatura de terror e apresenta por meio de cartas, diários e notícias os ataques do vampiro Conde Drácula a moradores de Londres e da Transilvânia. O romance epistolar marcou o gênero e, mesmo não sendo a primeira obra a retratar esse mito literário, definiu o que conhecemos hoje como vampiro, influenciando a literatura, cinema e teatro.', 16),
@@ -89,8 +84,7 @@ class Database {
             ('As viagens de Gulliver', 'Jonathan Swift', 'Fantasia', 'O jovem Gulliver é um médico cirurgião e aprendiz de navegação sedento de aventuras. Agora é o único sobrevivente de um naufrágio e foi parar em uma curiosa terra, onde conhece lugares e pessoas bastante diferentes. Em um lugar Gulliver é um gigante, noutro uma miniatura, quase um brinquedo.', 24
             )
         ");
-        */
-
+        
         $con->exec("
             CREATE TABLE IF NOT EXISTS Carrinho (
                 id_usuario INTEGER,

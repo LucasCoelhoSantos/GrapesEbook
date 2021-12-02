@@ -2,6 +2,8 @@
 
 ![GitHub contributors](https://img.shields.io/github/contributors/LucasCoelhoSantos/GrapesEbook?style=for-the-badge)
 
+[![GitHub license](https://img.shields.io/github/license/LucasCoelhoSantos/GrapesEbook?style=for-the-badge)](https://github.com/LucasCoelhoSantos/GrapesEbook)
+
 # Grapes Ebook
 
 Grapes Ebook é uma aplicação de loja online, que permite clientes cadastrados selecionem e comprem produtos (a compra é ficticia).
@@ -28,18 +30,6 @@ Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 - [ ] Receber recomendações de produtos
 - [ ] Fazer buscas avançadas
 - [ ] Se cadastrar para receber novidades
-
-## Usando Nome_da_Aplicação
-
-Para usar GrapesEbook, siga os seguintes passos:
-
-- Abra o navegador e digite o seguinte endereço: `http://localhost/....`
-- Ao abrir a aplicação você poderá:
-  - Navegar pelo conteúdo público, ou
-  - Entrar com usuário e senha para ....
-- _Continua ..._
-
-_Descreva as principais atividades, e/ou fluxos, que são possíveis de serem realizadas na aplicação._
 
 ## Plataformas para inspiração
 
