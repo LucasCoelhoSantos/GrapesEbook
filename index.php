@@ -36,6 +36,7 @@ $controller3 = new ProdutoController();
 
 // ROUTE GET HOMEPAGE
 Route::add('/homepage', fn () => $controller1->homepageIndex(), ['get']);
+Route::add('/pageNotFound', fn () => $controller1->pageNotFound(), ['get']);
 
 // ROUTE GET LOGIN
 Route::add('/login', fn () => $controller2->loginIndex(), ['get']);
@@ -69,7 +70,7 @@ Route::add('/', function () {
 
 Route::add('/.*', function () {
     http_response_code(404);
-    echo "A página que você está procurando não existe :(";
+    header('Location: ' . BASEPATH . 'pageNotFound');
 }, ['get']);
 
 // Inicia o router

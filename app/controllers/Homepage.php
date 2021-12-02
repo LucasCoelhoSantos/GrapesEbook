@@ -14,14 +14,14 @@ class HomepageController extends Controller {
      */
     private $loggedUser;
 
-    /**
-     *  Método construtor da classe.
-     *  Ao ser instanciado, ?
-     */
-
     // Função que renderiza a página (visão) da homepage.
     public function homepageIndex(): void {
         $this->view('users/homepage');
+    }
+
+    // Função que renderiza a página (visão) da homepage.
+    public function pageNotFound(): void {
+        $this->view('layout/pageNotFound');
     }
 }
 
