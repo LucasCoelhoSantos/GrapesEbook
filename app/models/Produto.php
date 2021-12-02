@@ -38,13 +38,19 @@ class Produto {
      */
     private $preco;
 
+    /**
+     * @var string imagem do produto
+     */
+    private $imagem;
+
     // Contrutor da classe, responsável por inicializar os dados.
-    function __construct(string $nome, string $autor, string $genero, string $descricao, float $preco) {
+    function __construct(string $nome, string $autor, string $genero, string $descricao, float $preco, string $imagem) {
         $this->nome = $nome;
         $this->autor = $autor;
         $this->genero = $genero;
         $this->descricao = $descricao;
         $this->preco = $preco;
+        $this->imagem = $imagem;
     }
 
     // Método get genérico para todos os campos
@@ -61,12 +67,14 @@ class Produto {
     public function salvar(): void {
         $con = Database::getConnection();
 
-        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, genero, descricao, preco) VALUES (:nome, :autor, :genero, :descricao, :preco)');
+        $stm = $con->prepare('INSERT INTO Produtos (nome, autor, genero, descricao, preco, imagem) VALUES (:nome, :autor, :genero, :descricao, :preco, :imagem)');
         $stm->bindValue(':nome', $this->nome);
         $stm->bindValue(':autor', $this->autor);
         $stm->bindValue(':genero', $this->genero);
         $stm->bindValue(':descricao', $this->descricao);
         $stm->bindValue(':preco', $this->preco);
+        $stm->bindValue(':imagem', $this->imagem);
+
         $stm->execute();
     }
 
@@ -75,14 +83,14 @@ class Produto {
      */ 
     static public function buscarProduto($nome): Produto {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
+        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco, imagem FROM Produtos WHERE nome = :nome ORDER BY nome ASC');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();
         $resultado = $stm->fetch();
 
         if ($resultado) {
-            $produtc = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
+            $produtc = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco'], $resultado ['imagem']);
             return $produtc;
         }
         else {
@@ -97,14 +105,14 @@ class Produto {
     static public function buscarProdutoNome($nome): array {
         $con = Database::getConnection();
         $nome = "%".trim($_GET['nome'])."%";
-        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco FROM Produtos WHERE nome LIKE :nome ORDER BY nome ASC');
+        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco, imagem FROM Produtos WHERE nome LIKE :nome ORDER BY nome ASC');
         $stm->bindParam(':nome', $nome);
 
         $stm->execute();
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
+            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco'], $resultado['imagem']);
             array_push($resultados, $product);
         }
         return $resultados;
@@ -116,14 +124,14 @@ class Produto {
      */ 
     static public function buscarProdutoGenero($genero): array {
         $con = Database::getConnection();
-        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco FROM Produtos WHERE genero = :genero');
+        $stm = $con->prepare('SELECT nome, autor, genero, descricao, preco, imagem FROM Produtos WHERE genero = :genero');
         $stm->bindParam(':genero', $genero);
 
         $stm->execute();
         $resultados = [];
 
         while ($resultado = $stm->fetch()) {
-            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco']);
+            $product = new Produto($resultado['nome'], $resultado ['autor'], $resultado['genero'], $resultado['descricao'], $resultado['preco'], $resultado['imagem']);
             array_push($resultados, $product);
         }
         return $resultados;

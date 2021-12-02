@@ -67,13 +67,10 @@
                 <?php } else { ?>
                     <?php foreach ($data as $product) { ?>
                         <div class="product-card">
-                            <!--
-                                TO DO - Implementar foto do produto
-                            -->
                             <form action="<?= BASEPATH ?>product/detail" method="GET">
                                 <div><h2><?= $product->nome?></h2></div>
                                 <div><span>Autor: <?= $product->autor?></span></div>
-                                <div><span><img src="#" alt="imagem: <?= $product->nome ?>"></span></div>
+                                <div><span><img src="<?= $product->imagem?>" alt="imagem: <?= $product->nome ?>"></span></div>
                                 <div><span>Gênero: <?= $product->genero?></span></div>
                                 <div><span>Preço: R$<?= $product->preco?>,00</span></div>
 
